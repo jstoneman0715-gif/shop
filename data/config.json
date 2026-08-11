@@ -1,11 +1,11 @@
 {
   "_comment": "MASTER SITE CONFIG. Standalone brand, standalone repository, standalone URL. Product mix and price band chosen from 2026 TikTok Shop category data: beauty leads GMV, jewelry carries the best margin, and $15-30 is the conversion sweet spot.",
   "store": {
-    "name": "SOFTLAUNCH",
-    "short_name": "Softlaunch",
+    "name": "ALL THE RAGE",
+    "short_name": "All The Rage",
     "legal_entity": "Softlaunch (Julian Stoneman, sole proprietor)",
     "tagline": "The drop everyone's about to have.",
-    "description": "Softlaunch is a short-form shop for the beauty, jewelry and everyday-object drops that go viral first and sell out second. Small edits, honest prices, free shipping over $35.",
+    "description": "All The Rage is a short-form shop for the beauty, jewelry and everyday-object drops that go viral first and sell out second. Small edits, honest prices, free shipping over $35.",
     "owner": "Julian Stoneman",
     "support_email": "jstoneman0715@gmail.com",
     "base_url": "https://jstoneman0715-gif.github.io/shop",
