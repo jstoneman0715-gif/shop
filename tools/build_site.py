@@ -391,13 +391,18 @@ def head(
     og_image: str,
     keywords: str = "",
     jsonld: list[dict] | None = None,
-    robots: str = "index, follow, max-image-preview:large",
+    robots: str = "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
 ) -> str:
     verif = ""
-    if CFG["seo"].get("google_site_verification"):
-        verif += f'\n    <meta name="google-site-verification" content="{e(CFG["seo"]["google_site_verification"])}" />'
-    if CFG["seo"].get("bing_site_verification"):
-        verif += f'\n    <meta name="msvalidate.01" content="{e(CFG["seo"]["bing_site_verification"])}" />'
+    for key, tag in (
+        ("google_site_verification", "google-site-verification"),
+        ("bing_site_verification", "msvalidate.01"),
+        ("yandex_verification", "yandex-verification"),
+        ("pinterest_verification", "p:domain_verify"),
+    ):
+        value = CFG["seo"].get(key)
+        if value:
+            verif += f'\n    <meta name="{tag}" content="{e(value)}" />'
     blocks = "".join(
         f'\n    <script type="application/ld+json">{json.dumps(b, ensure_ascii=False)}</script>'
         for b in (jsonld or [])
@@ -601,6 +606,19 @@ def org_jsonld() -> dict:
     }
 
 
+def website_jsonld() -> dict:
+    return {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": abs_url(f"{SR}#website"),
+        "url": abs_url(SR),
+        "name": STORE["name"],
+        "description": STORE["description"],
+        "inLanguage": "en",
+        "publisher": {"@id": abs_url(f"{SR}#store")},
+    }
+
+
 def breadcrumb_jsonld(trail: list[tuple[str, str]]) -> dict:
     return {
         "@context": "https://schema.org",
@@ -774,6 +792,7 @@ def build_storefront() -> None:
         keywords="lip gloss set, glass skin serum, gold fill jewelry, stacking rings, sunset lamp, fridge organiser, heatless curls, affordable beauty shop",
         jsonld=[
             org_jsonld(),
+            website_jsonld(),
             breadcrumb_jsonld([(STORE["name"], SR)]),
             item_list,
             faq_jsonld(STORE_FAQ),
@@ -1311,10 +1330,40 @@ def build_seo() -> None:
 # NOTE: on a GitHub Pages *project* site this file lives under a path prefix and
 # crawlers only honour robots.txt at the domain root. It becomes effective the
 # moment the site moves to its own domain. Until then, indexing control comes
-# from each page's meta robots tag, and sitemaps are submitted in Search Console.
+# from each page's meta robots tag, and sitemaps are submitted in each engine's
+# webmaster console.
 User-agent: *
 Allow: /
 Disallow: {url(f"{SR}thank-you/")}
+
+# Named explicitly: some crawlers respect a specific block more reliably than a
+# wildcard, and a few ignore Crawl-delay entirely.
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: PetalBot
+Allow: /
 
 Sitemap: {abs_url('/sitemap.xml')}
 Sitemap: {abs_url('/sitemap-index.xml')}

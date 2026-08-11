@@ -8,8 +8,8 @@
     "description": "Softlaunch is a short-form shop for the beauty, jewelry and everyday-object drops that go viral first and sell out second. Small edits, honest prices, free shipping over $35.",
     "owner": "Julian Stoneman",
     "support_email": "jstoneman0715@gmail.com",
-    "base_url": "https://softlaunch.example",
-    "path_prefix": "",
+    "base_url": "https://jstoneman0715-gif.github.io/shop",
+    "path_prefix": "/shop",
     "store_root": "/",
     "currency": "USD",
     "currency_symbol": "$",
@@ -84,7 +84,9 @@
     "default_og_image": "/assets/og-store.svg",
     "twitter_handle": "",
     "google_site_verification": "",
-    "bing_site_verification": ""
+    "bing_site_verification": "",
+    "yandex_verification": "",
+    "pinterest_verification": ""
   },
   "conversion": {
     "_comment": "Levers rendered honestly — no invented ratings, sold counts, countdowns or stock numbers. Those get fabricated constantly in this category and they are the fastest way to lose a customer twice.",
