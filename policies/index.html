@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Store Policies | Softlaunch</title>
+    <meta name="description" content="Refunds, delivery, privacy and terms of sale for SOFTLAUNCH." />
+    <meta name="keywords" content="" />
+    <meta name="author" content="Julian Stoneman" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href="https://softlaunch.example/policies/" />
+    <link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="SOFTLAUNCH" />
+    <meta property="og:url" content="https://softlaunch.example/policies/" />
+    <meta property="og:title" content="Store Policies | Softlaunch" />
+    <meta property="og:description" content="Refunds, delivery, privacy and terms of sale for SOFTLAUNCH." />
+    <meta property="og:image" content="https://softlaunch.example/assets/og-store.svg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Store Policies | Softlaunch" />
+    <meta name="twitter:description" content="Refunds, delivery, privacy and terms of sale for SOFTLAUNCH." />
+    <meta name="twitter:image" content="https://softlaunch.example/assets/og-store.svg" />
+    <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --accent: #ff2e63;
+      --accent-soft: #ff7aa2;
+      --bg: #0b0b0f;
+      --bg-alt: #15151d;
+      --text: #f4f4f7;
+      --muted: #a0a0a0;
+      --line: rgba(255, 107, 53, 0.22);
+      --card: linear-gradient(135deg, rgba(26,26,26,.85) 0%, rgba(42,42,42,.85) 100%);
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(180deg, var(--bg) 0%, var(--bg-alt) 100%);
+      background-attachment: fixed;
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); }
+    img { max-width: 100%; height: auto; }
+    .container { max-width: 1280px; margin: 0 auto; padding: 2rem 1rem 4rem; }
+    .skip { position: absolute; left: -9999px; }
+    .skip:focus { left: 1rem; top: 1rem; background: var(--accent); color: #000; padding: .6rem 1rem; border-radius: 6px; z-index: 99; }
+
+    .topbar {
+      background: rgba(255, 107, 53, 0.1);
+      border-bottom: 1px solid var(--line);
+      text-align: center; padding: .6rem 1rem; font-size: .9rem; color: #ffd9c7;
+    }
+    .topbar a { color: var(--accent); font-weight: 700; text-decoration: none; }
+    .topbar a:hover { text-decoration: underline; }
+
+    header.site {
+      text-align: center; padding: 2.5rem 1rem 2rem;
+      border-bottom: 3px solid var(--accent);
+    }
+    header.site .brandmark {
+      font-size: clamp(1.9rem, 7vw, 3.4rem); color: var(--accent);
+      text-transform: uppercase; letter-spacing: 3px; font-weight: 900; line-height: 1.1;
+    }
+    header.site .tagline { color: var(--muted); letter-spacing: 1px; margin-top: .6rem; font-weight: 300; font-size: clamp(.95rem, 2.5vw, 1.2rem); }
+
+    nav.pillars { display: flex; flex-wrap: wrap; gap: .6rem; justify-content: center; margin: 1.4rem auto 0; max-width: 1000px; }
+    nav.pillars a {
+      background: rgba(255,255,255,.05); border: 1px solid var(--line); color: var(--text);
+      padding: .5rem 1rem; border-radius: 999px; text-decoration: none; font-size: .88rem; font-weight: 600;
+      transition: all .2s ease;
+    }
+    nav.pillars a:hover { background: var(--accent); color: #000; }
+    nav.pillars a.active { background: var(--accent); color: #000; }
+
+    .breadcrumb { font-size: .85rem; color: var(--muted); margin-bottom: 1.5rem; }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--accent); }
+
+    .hero {
+      display: grid; grid-template-columns: 1.15fr .85fr; gap: 2rem; align-items: center;
+      background: var(--card); border: 1px solid var(--line); border-radius: 16px;
+      padding: clamp(1.5rem, 4vw, 3rem); margin-bottom: 3rem;
+      box-shadow: 0 12px 40px rgba(0,0,0,.35);
+    }
+    .hero h2 { font-size: clamp(1.5rem, 4vw, 2.4rem); color: #fff; line-height: 1.2; margin-bottom: 1rem; }
+    .hero p { color: #ccc; margin-bottom: 1.4rem; }
+    .hero-art { width: 100%; border-radius: 12px; border: 1px solid var(--line); }
+    @media (max-width: 860px) { .hero { grid-template-columns: 1fr; } }
+
+    .eyebrow { text-transform: uppercase; letter-spacing: 2px; font-size: .75rem; color: var(--accent); font-weight: 800; margin-bottom: .8rem; }
+
+    .btn {
+      display: inline-block; background: linear-gradient(135deg, var(--accent) 0%, var(--accent-soft) 100%);
+      color: #000; font-weight: 800; padding: .95rem 1.8rem; border-radius: 8px; text-decoration: none;
+      border: 2px solid transparent; cursor: pointer; font-size: 1rem; font-family: inherit;
+      transition: transform .2s cubic-bezier(.34,1.56,.64,1), box-shadow .2s ease;
+      box-shadow: 0 4px 15px rgba(255,107,53,.25);
+    }
+    .btn:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(255,107,53,.4); }
+    .btn.secondary { background: transparent; color: var(--accent); border-color: var(--accent); box-shadow: none; }
+    .btn.secondary:hover { background: rgba(255,107,53,.12); }
+    .btn.block { display: block; width: 100%; text-align: center; }
+
+    h2.section { font-size: clamp(1.3rem, 3vw, 1.9rem); color: var(--accent); text-transform: uppercase; letter-spacing: 2px; margin: 3rem 0 .4rem; }
+    .section-blurb { color: var(--muted); margin-bottom: 1.6rem; max-width: 70ch; }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 1.4rem; }
+
+    .card {
+      background: var(--card); border: 1px solid rgba(255,255,255,.07); border-radius: 14px;
+      overflow: hidden; display: flex; flex-direction: column;
+      transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+    }
+    .card:hover { transform: translateY(-5px); border-color: var(--line); box-shadow: 0 16px 34px rgba(0,0,0,.4); }
+    .card img { width: 100%; display: block; aspect-ratio: 1200 / 630; object-fit: cover; background: #111; }
+    .card-body { padding: 1.2rem; display: flex; flex-direction: column; gap: .6rem; flex: 1; }
+    .card h3 { font-size: 1.12rem; line-height: 1.3; }
+    .card h3 a { color: #fff; text-decoration: none; }
+    .card h3 a:hover { color: var(--accent); }
+    .card p { color: #b5b5b5; font-size: .92rem; flex: 1; }
+    .card-foot { display: flex; align-items: center; justify-content: space-between; gap: .8rem; margin-top: .4rem; }
+
+    .price { font-size: 1.35rem; font-weight: 900; color: #fff; white-space: nowrap; }
+    .price .suffix { font-size: .85rem; font-weight: 600; color: var(--muted); }
+    .price s { color: var(--muted); font-size: .95rem; font-weight: 500; margin-right: .4rem; }
+
+    .badge {
+      display: inline-block; background: rgba(255,107,53,.15); color: var(--accent);
+      border: 1px solid var(--line); border-radius: 999px; padding: .18rem .7rem;
+      font-size: .72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px;
+    }
+    .badge.free { background: rgba(80,200,120,.14); color: #6ee7a0; border-color: rgba(110,231,160,.3); }
+
+    .trust { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1rem; margin: 2.5rem 0; }
+    .trust div { background: rgba(255,255,255,.035); border: 1px solid rgba(255,255,255,.07); border-radius: 10px; padding: 1rem 1.2rem; }
+    .trust strong { display: block; color: var(--accent); font-size: .85rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: .25rem; }
+    .trust span { color: #b5b5b5; font-size: .9rem; }
+
+    .product { display: grid; grid-template-columns: 1fr 380px; gap: 2.5rem; align-items: start; }
+    @media (max-width: 900px) { .product { grid-template-columns: 1fr; } }
+    .product h1 { font-size: clamp(1.6rem, 4.5vw, 2.6rem); color: #fff; line-height: 1.15; margin: .6rem 0 .8rem; }
+    .lede { font-size: 1.1rem; color: #ccc; margin-bottom: 1.6rem; }
+    .prose p { margin-bottom: 1rem; color: #c8c8c8; }
+    .prose h2 { color: var(--accent); font-size: 1.25rem; margin: 2rem 0 .8rem; }
+    .prose h3 { color: #fff; font-size: 1.05rem; margin: 1.5rem 0 .6rem; }
+    .prose ul { margin: 0 0 1.2rem 1.2rem; color: #c8c8c8; }
+    .prose li { margin-bottom: .5rem; }
+    .feature-list { list-style: none; margin-left: 0 !important; }
+    .feature-list li { padding-left: 1.7rem; position: relative; }
+    .feature-list li::before { content: "▸"; color: var(--accent); position: absolute; left: .3rem; font-weight: 900; }
+
+    .buybox {
+      background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+      padding: 1.5rem; position: sticky; top: 1rem; box-shadow: 0 12px 34px rgba(0,0,0,.4);
+    }
+    .buybox .price { font-size: 2.2rem; display: block; margin-bottom: .2rem; }
+    .buybox .delivery { color: var(--muted); font-size: .88rem; margin: .8rem 0 1.2rem; }
+    .buybox .fineprint { color: var(--muted); font-size: .78rem; margin-top: 1rem; text-align: center; }
+    .buybox img { width: 100%; border-radius: 10px; margin-bottom: 1.2rem; border: 1px solid rgba(255,255,255,.08); }
+    select {
+      width: 100%; padding: .7rem .8rem; border-radius: 8px; background: #141414; color: var(--text);
+      border: 1px solid rgba(255,255,255,.15); font-family: inherit; font-size: .95rem; margin-bottom: 1rem;
+    }
+
+    details.faq { background: rgba(255,255,255,.035); border: 1px solid rgba(255,255,255,.07); border-radius: 10px; padding: 1rem 1.2rem; margin-bottom: .8rem; }
+    details.faq summary { cursor: pointer; font-weight: 700; color: #fff; }
+    details.faq summary::marker { color: var(--accent); }
+    details.faq p { margin-top: .7rem; color: #b8b8b8; }
+
+    .capture {
+      background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+      padding: clamp(1.4rem, 4vw, 2.4rem); margin: 3rem 0; text-align: center;
+    }
+    .capture h2 { color: var(--accent); font-size: clamp(1.2rem, 3vw, 1.7rem); margin-bottom: .6rem; }
+    .capture p { color: #c0c0c0; max-width: 60ch; margin: 0 auto 1.4rem; }
+    .capture form { display: flex; gap: .7rem; max-width: 520px; margin: 0 auto; flex-wrap: wrap; }
+    .capture input {
+      flex: 1 1 240px; padding: .9rem 1rem; border-radius: 8px; background: #141414; color: var(--text);
+      border: 1px solid rgba(255,255,255,.15); font-family: inherit; font-size: 1rem;
+    }
+    .capture .note { color: var(--muted); font-size: .8rem; margin-top: .9rem; }
+
+    .notice { background: rgba(255,107,53,.08); border: 1px solid var(--line); border-radius: 10px; padding: 1rem 1.2rem; color: #d8d8d8; font-size: .92rem; margin: 1rem 0; }
+
+    table.compare { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: .93rem; }
+    table.compare th, table.compare td { border-bottom: 1px solid rgba(255,255,255,.09); padding: .75rem .6rem; text-align: left; }
+    table.compare th { color: var(--accent); text-transform: uppercase; font-size: .75rem; letter-spacing: 1px; }
+    .table-wrap { overflow-x: auto; }
+
+    .filterbar {
+      display: flex; flex-wrap: wrap; gap: .6rem; align-items: center;
+      background: var(--card); border: 1px solid rgba(255,255,255,.08);
+      border-radius: 12px; padding: 1rem; margin: 0 0 1.6rem;
+      position: sticky; top: 0; z-index: 20; backdrop-filter: blur(8px);
+    }
+    .filterbar input[type="search"] {
+      flex: 1 1 240px; padding: .7rem .9rem; border-radius: 8px; background: #0b1119;
+      color: var(--text); border: 1px solid rgba(255,255,255,.15); font-family: inherit; font-size: .95rem;
+    }
+    .chip {
+      background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12); color: var(--text);
+      padding: .5rem .9rem; border-radius: 999px; font-size: .85rem; font-weight: 600;
+      cursor: pointer; font-family: inherit; transition: all .2s ease; white-space: nowrap;
+    }
+    .chip:hover { border-color: var(--accent); }
+    .chip[aria-pressed="true"] { background: var(--accent); color: #04120c; border-color: var(--accent); }
+    .filter-count { color: var(--muted); font-size: .85rem; margin-left: auto; }
+    .no-results { color: var(--muted); padding: 2rem 0; }
+
+    .stickybuy { display: none; }
+    @media (max-width: 900px) {
+      .stickybuy {
+        display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 40;
+        align-items: center; justify-content: space-between; gap: 1rem;
+        background: rgba(7,11,18,.96); border-top: 1px solid var(--line);
+        padding: .7rem 1rem; backdrop-filter: blur(10px);
+      }
+      .stickybuy .price { font-size: 1.3rem; }
+      .stickybuy .btn { padding: .8rem 1.2rem; font-size: .92rem; white-space: nowrap; }
+      .stickybuy .fineprint { display: none; }
+      body { padding-bottom: 4.5rem; }
+      .buybox { position: static; }
+    }
+
+    table.sources { width: 100%; border-collapse: collapse; margin: 1.2rem 0; font-size: .92rem; }
+    table.sources th, table.sources td { border-bottom: 1px solid rgba(255,255,255,.09); padding: .7rem .6rem; text-align: left; vertical-align: top; }
+    table.sources th { color: var(--accent); text-transform: uppercase; font-size: .72rem; letter-spacing: 1px; }
+
+    footer.site { border-top: 1px solid rgba(255,255,255,.09); margin-top: 3rem; padding: 2.5rem 1rem; text-align: center; color: var(--muted); font-size: .88rem; }
+    footer.site nav { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-bottom: 1.2rem; }
+    footer.site a { color: #b5b5b5; text-decoration: none; }
+    footer.site a:hover { color: var(--accent); }
+    footer.site .legal { max-width: 75ch; margin: 1rem auto 0; font-size: .8rem; line-height: 1.7; }
+</style>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "SOFTLAUNCH", "item": "https://softlaunch.example/"}, {"@type": "ListItem", "position": 2, "name": "Policies", "item": "https://softlaunch.example/policies/"}]}</script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <header class="site">
+      <p class="brandmark"><a href="/" style="color:inherit;text-decoration:none">SOFTLAUNCH</a></p>
+      <p class="tagline">The drop everyone&#x27;s about to have.</p>
+      <nav class="pillars"><a href="/">Store</a><a href="/#beauty">Beauty</a><a href="/#jewelry">Jewelry</a><a href="/#wellness">Wellness</a><a href="/#home">Home</a></nav>
+    </header>
+
+    <main id="main" class="container">
+      <div class="prose" style="max-width:75ch;margin:0 auto">
+        <h1 style="color:#fff;font-size:2rem;margin-bottom:1rem">Store policies</h1>
+        <p>The rules that apply when you buy from this store, in plain language.</p>
+        <ul class="feature-list"><li><a href="/policies/refunds/">Refund Policy</a> — How refunds work on digital downloads, memberships and made-to-order apparel.</li><li><a href="/policies/shipping/">Delivery &amp; Shipping</a> — Delivery times for digital downloads and made-to-order apparel and prints.</li><li><a href="/policies/privacy/">Privacy Policy</a> — What data this store collects, who processes it, and how to have it deleted.</li><li><a href="/policies/terms/">Terms of Sale</a> — The terms that apply to purchases from this store.</li></ul>
+      </div>
+    </main>
+
+    <footer class="site">
+      <nav><a href="/">Store</a><a href="/policies/shipping/">Delivery &amp; Shipping</a><a href="/policies/refunds/">Refunds</a><a href="/policies/terms/">Terms</a><a href="/policies/privacy/">Privacy</a><a href="mailto:jstoneman0715@gmail.com">Contact</a></nav>
+      <p>&copy; 2026 Softlaunch (Julian Stoneman, sole proprietor). All rights reserved.</p>
+      <p class="legal">
+        Softlaunch sells beauty, jewelry, wellness and home goods. Nothing here is a medical
+        or cosmetic claim beyond what the product page states, and results vary between people.
+        Ingredients and materials are listed on every product page — check them against your own
+        sensitivities before buying. Prices in USD.
+      </p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+name: Update merchandising
+
+# The bot. Re-ranks the shop for what is likely to sell this month, rebuilds the
+# page, and commits only when something actually changed.
+
+on:
+  schedule:
+    - cron: "0 7 * * 1" # Monday mornings, before the week's traffic
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: merchandising
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Test the ranking logic
+        run: python3 tools/test_catalogue.py
+
+      - name: Re-rank the catalogue
+        run: python3 tools/update_catalogue.py
+
+      - name: Rebuild the storefront
+        run: python3 tools/build_onepage.py
+
+      - name: Commit if anything changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/products.json data/merchandising-report.md dist/onepage.html
+          if git diff --staged --quiet; then
+            echo "Shop already ranked correctly for this month."
+          else
+            git commit -m "chore: re-rank shop for the month"
+            git push
+          fi

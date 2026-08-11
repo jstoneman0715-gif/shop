@@ -1,0 +1,1155 @@
+{
+  "_comment": "SOFTLAUNCH catalogue — deliberately broad rather than one niche, so the shop has something to sell in every month and every basket. Prices sit in the $14-34 impulse band that converts best, with two bundles above it to lift order value. Each product carries demand_weight and peak_months, which tools/update_catalogue.py uses to re-rank the shop automatically.",
+  "_mechanics": {
+    "free_shipping_threshold": 35,
+    "why": "Set above the natural basket so most shoppers add one more item — the highest-ROI order-value lever a small store has.",
+    "subscribe_discount_pct": 15,
+    "no_fake_signals": "No invented ratings, sold counts, viewer counts or countdown timers. Stock renders only when a real count is set; reviews render only when real ones exist."
+  },
+  "categories": [
+    {
+      "slug": "beauty",
+      "name": "Beauty",
+      "blurb": "Lip, skin and the small formulas that show a result on camera."
+    },
+    {
+      "slug": "skincare",
+      "name": "Skincare",
+      "blurb": "Serums, masks and SPF. Consumables — the repeat-purchase engine of the shop."
+    },
+    {
+      "slug": "hair",
+      "name": "Hair",
+      "blurb": "Heatless styling, scalp care and the tools that photograph well."
+    },
+    {
+      "slug": "jewelry",
+      "name": "Jewelry",
+      "blurb": "Gold-fill and stainless, water-safe, sleepable. The highest-margin shelf."
+    },
+    {
+      "slug": "wellness",
+      "name": "Wellness",
+      "blurb": "Wind-down and recovery objects. No pills, no powders, no claims we can't stand behind."
+    },
+    {
+      "slug": "fitness",
+      "name": "Fitness",
+      "blurb": "Small equipment that fits a flat and survives a January resolution."
+    },
+    {
+      "slug": "home",
+      "name": "Home",
+      "blurb": "The light, the scent and the objects that make a room look like the video."
+    },
+    {
+      "slug": "kitchen",
+      "name": "Kitchen",
+      "blurb": "Single-job tools that solve a visible problem in under thirty seconds."
+    },
+    {
+      "slug": "pet",
+      "name": "Pet",
+      "blurb": "For the animal that outranks you in the household."
+    },
+    {
+      "slug": "tech",
+      "name": "Tech Accessories",
+      "blurb": "Cables, stands and grips. Accessories only — no electronics we'd have to service."
+    },
+    {
+      "slug": "bags",
+      "name": "Bags & Carry",
+      "blurb": "Totes, pouches and the organisers that go inside them."
+    },
+    {
+      "slug": "bundles",
+      "name": "Bundles",
+      "blurb": "The combinations people already buy together, priced under the sum of the parts."
+    }
+  ],
+  "products": [
+    {
+      "slug": "mineral-spf-fluid",
+      "name": "Mineral SPF 50 Fluid",
+      "category": "skincare",
+      "type": "physical",
+      "billing": "one_time",
+      "price": 26,
+      "compare_at": null,
+      "unit_cost": 8.0,
+      "featured": true,
+      "badge": "Peak season",
+      "sku": "SL-MINERALSPF",
+      "short": "Zinc SPF that doesn't cast, doesn't pill, doesn't smell like a pool.",
+      "description": "A weightless mineral fluid with zinc oxide, tinted just enough to cancel the white cast. Layers over serum and under makeup without rolling.",
+      "features": [
+        "SPF 50, zinc oxide",
+        "No white cast",
+        "Layers under makeup",
+        "50 ml"
+      ],
+      "delivery": "Ships in 1–2 business days.",
+      "checkout_url": "",
+      "subscribe": true,
+      "stock": null,
+      "reviews": [],
+      "variants": null,
+      "keywords": [
+        "mineral sunscreen",
+        "spf 50 face",
+        "no white cast sunscreen"
+      ],
+      "faq": [],
+      "demand_weight": 0.8,
+      "peak_months": [
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "slug": "glass-skin-serum",
+      "name": "Glass Skin Serum",
+      "category": "skincare",
+      "type": "physical",
+      "billing": "one_time",
+      "price": 28,
+      "compare_at": 36,
+      "unit_cost": 9.2,
+      "featured": true,
+      "badge": "Best seller",
+      "sku": "SL-GLASSSKINS",
+      "short": "Niacinamide and hyaluronic in a weightless layer. The look, minus the filter.",
+      "description": "5% niacinamide with multi-weight hyaluronic, finishing even and reflective. Sits under SPF without pilling, which is where most serums in this band fail.",
+      "features": [
+        "5% niacinamide + hyaluronic",
+        "No pilling under SPF",
+        "Fragrance-free",
+        "30 ml dropper"
+      ],
+      "delivery": "Ships in 1–2 business days.",
+      "checkout_url": "",
+      "subscribe": true,
+      "stock": null,
+      "reviews": [],
+      "variants": null,
+      "keywords": [
+        "glass skin serum",
+        "niacinamide serum",
+        "hyaluronic serum"
+      ],
+      "faq": [],
+      "demand_weight": 1.0,
+      "peak_months": [
+        1,
+        9,
+        10
+      ]
+    },
+    {
+      "slug": "everyday-tote",
+      "name": "Everyday Canvas Tote",
+      "category": "bags",
+      "type": "physical",
+      "billing": "one_time",
+      "price": 29,
+      "compare_at": 38,
+      "unit_cost": 9.5,
+      "featured": true,
+      "badge": null,
+      "sku": "SL-EVERYDAYTOT",
+      "short": "Structured enough to stand up on its own.",
+      "description": "16 oz canvas with a reinforced base, an interior zip pocket and straps long enough for a shoulder over a coat. It stands up when you put it down.",
+      "features": [
+        "16 oz structured canvas",
+        "Reinforced base",
+        "Interior zip pocket",
+        "Shoulder-length straps"
+      ],
+      "delivery": "Ships in 1–2 business days.",
+      "checkout_url": "",
+      "subscribe": false,
+      "stock": null,
+      "reviews": [],
+      "variants": null,
+      "keywords": [
+        "canvas tote bag",
+        "everyday tote",
+        "structured tote"
+      ],
+      "faq": [],
+      "demand_weight": 0.68,
+      "peak_months": [
+        8,
+        9,
+        11,
+        12
+      ]
+    },
+    {
+      "slug": "fridge-organiser-set",
+      "name": "Fridge Organiser Set",
+      "category": "kitchen",
+      "type": "physical",
+      "billing": "one_time",
+      "price": 27,
+      "compare_at": 35,
+      "unit_cost": 9.0,
+      "featured": true,
+      "badge": null,
+      "sku": "SL-FRIDGEORGAN",
+      "short": "Six clear bins that make a fridge look like a restock video.",
+      "description": "Stackable BPA-free bins in mixed sizes with cut-out handles, sized to standard shelves. The reason your fridge stays tidy for more than a week.",
+      "features": [
+        "Six bins, mixed sizes",
+        "Fits standard shelves",
+        "BPA-free, dishwasher safe",
+        "Cut-out handles"
+      ],
+      "delivery": "Ships in 1–2 business days.",
+      "checkout_url": "",
+      "subscribe": false,
+      "stock": null,
+      "reviews": [],
+      "variants": null,
+      "keywords": [
+        "fridge organizer",
+        "pantry bins",
+        "kitchen organization"
+      ],
+      "faq": [],
+      "demand_weight": 0.7,
+      "peak_months": [
+        1,
+        8,
+        9
+      ]
+    },
+    {
+      "slug": "recovery-roller",
+      "name": "Cryo Recovery Roller",
+      "category": "wellness",
+      "type": "physical",
+      "billing": "one_time",
+      "price": 18,
+      "compare_at": 25,
+      "unit_cost": 5.0,
+      "featured": true,
+      "badge": null,
+      "sku": "SL-RECOVERYROL",
+      "short": "Freeze it, roll it. For puffy mornings and post-gym everything.",
+      "description": "A stainless roller you keep in the freezer — under-eyes in the morning, calves after training. Holds cold about fifteen minutes, longer than the plastic ones.",
+      "features": [
+        "Stainless, freezer-stored",
+        "Holds cold ~15 min",
+        "Face and body",
+        "Contoured handle"
+      ],
+      "delivery": "Ships in 1–2 business days.",
+      "checkout_url": "",
+      "subscribe": false,
+      "stock": null,
+      "reviews": [],
+      "variants": null,
+      "keywords": [
+        "ice roller",
+        "cryo roller",
+        "face roller"
+      ],
+      "faq": [],
+      "demand_weight": 0.68,
+      "peak_months": [
+        1,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "slug": "braided-cable-3pack",
+      "name": "Braided Charge Cable 3-Pack",
+      "category": "tech",
+      "type": "physical",
+      "billing": "one_time",
+      "price": 18,
+      "compare_at": null,
+      "unit_cost": 4.8,
+      "featured": true,
+      "badge": null,
+      "sku": "SL-BRAIDEDCABL",
+      "short": "The cables that outlive the phone.",
+      "description": "Three braided USB-C cables — 0.3 m, 1 m and 2 m — with reinforced strain relief at both ends, which is where every cable actually dies.",
+      "features": [
+        "Three lengths in one pack",
+        "Braided, reinforced ends",
+        "Fast charge rated",
+        "Colour-matched ties"
+      ],
+      "delivery": "Ships in 1–2 business days.",
+      "checkout_url": "",
+      "subscribe": false,
+      "stock": null,
+      "reviews": [],
+      "variants": null,
+      "keywords": [
+        "usb c cable pack",
+        "braided charging cable"
+      ],
+      "faq": [],
+      "demand_weight": 0.6,
+      "peak_months": [
+        11,
+        12,
+        8
+      ]
+    },
+    {
+      "slug": "heatless-curl-set",
+      "name": "Heatless Curl Set",
+      "category": "hair",
+      "type": "physical",
+      "billing": "one_time",
+      "price": 19,
+      "compare_at": 26,
+      "unit_cost": 5.6,
+      "featured": false,
+      "badge": null,
+      "sku": "SL-HEATLESSCUR",
+      "short": "Sleep on it, wake up with a blowout.",
+      "description": "A satin-wrapped rod with two scrunchies and a sectioning clip. Wrap damp hair before bed, unwrap in the morning. No heat, no damage, stays put overnight.",
+      "features": [
+        "Satin rod, 90 cm",
+        "Two scrunchies + clip",
+        "No heat",
+        "Stays put overnight"
+      ],
+      "delivery": "Ships in 1–2 business days.",
+      "checkout_url": "",
+      "subscribe": false,
+      "stock": null,
+      "reviews": [],
+      "variants": null,
+      "keywords": [
+        "heatless curls",
+        "curling ribbon",
+        "overnight curls"
+      ],
+      "faq": [],
+      "demand_weight": 0.75,
+      "peak_months": [
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "slug": "everyday-stack-bundle",
+      "name": "The Everyday Stack",
+      "category": "bundles",
+      "type": "physical",
+      "billing": "one_time",
+      "price": 49,
+      "compare_at": 58,
+      "unit_cost": 14.5,
+      "featured": false,
+      "badge": "Save $9",
+      "sku": "SL-EVERYDAYSTA",
+      "short": "Rings, huggies and the chain — the full stack, one order.",
+      "description": "The three gold-fill pieces that make up the everyday stack, together for less than buying them apart. All water-safe, all sleepable.",
+      "features": [
+        "Stack Rings (set of 3)",
+        "Huggie Hoops",
+        "Herringbone Chain",
+        "All water-safe gold-fill",
+        "Ships free"
+      ],
+      "delivery": "Ships in 1–2 business days.",
+      "checkout_url": "",
+      "subscribe": false,
+      "stock": null,
+      "reviews": [],
+      "variants": [
+        "Ring size 5",
+        "Ring size 6",
+        "Ring size 7",
+        "Ring size 8",
+        "Ring size 9"
+      ],
+      "keywords": [
+        "jewelry bundle",
+        "gold jewelry set"
+      ],
+      "faq": [],
+      "demand_weight": 0.86,
+      "peak_months": [
+        11,
+        12,
+        2
+      ]
+    },
+    {
+      "slug": "resistance-band-set",
+      "name": "Resistance Band Set",
+      "category": "fitness",
+      "type": "physical",
+      "billing": "one_time",
+      "price": 21,
+      "compare_at": 29,
+      "unit_cost": 6.0,
+      "featured": false,
+      "badge": null,
+      "sku": "SL-RESISTANCEB",
+      "short": "Five fabric bands that don't roll up your thigh.",
+      "description": "Fabric-wrapped rather than latex, so they grip instead of snapping up your leg mid-set. Five resistances, a mesh bag, and a door anchor.",
+      "features": [
+        "Five fabric bands",
+        "Non-roll grip",
+        "Door anchor + mesh bag",
+        "Light to extra heavy"
+      ],
+      "delivery": "Ships in 1–2 business days.",
+      "checkout_url": "",
+      "subscribe": false,
+      "stock": null,
+      "reviews": [],
+      "variants": null,
+      "keywords": [
+        "resistance bands",
+        "booty bands",
+        "home workout bands"
+      ],
+      "faq": [],
+      "demand_weight": 0.66,
+      "peak_months": [
+        1,
+        2,
+        3,
+        9
+      ]
+    },
+    {
+      "slug": "lip-glaze-trio",
+      "name": "Lip Glaze Trio",
+      "category": "beauty",
+      "type": "physical",
+      "billing": "one_time",
+      "price": 24,
+      "compare_at": 33,
+      "unit_cost": 8.4,
+      "featured": false,
+      "badge": "New drop",
+      "sku": "SL-LIPGLAZETR",
+      "short": "Three sheer, high-shine glazes that layer over anything. Non-sticky, actually.",
+      "description": "Clear, warm nude and berry tint in one set. Cushiony mirror finish built to avoid the tacky pull that makes most glosses unwearable with hair down.",
+      "features": [
+        "Three shades in one set",
+        "Mirror finish, no sticky pull",
+        "Layers over liner or alone",
+        "3.8 ml each"
+      ],
+      "delivery": "Ships in 1–2 business days.",
+      "checkout_url": "",
+      "subscribe": true,
+      "stock": null,
+      "reviews": [],
+      "variants": null,
+      "keywords": [
+        "lip gloss set",
+        "viral lip gloss",
+        "non sticky gloss"
+      ],
+      "faq": [],
+      "demand_weight": 0.95,
+      "peak_months": [
+        11,
+        12,
+        2
+      ]
+    },
+    {
+      "slug": "glow-starter-bundle",
+      "name": "The Glow Starter",
+      "category": "bundles",
+      "type": "physical",
+      "billing": "one_time",
+      "price": 59,
+      "compare_at": 68,
+      "unit_cost": 22.5,
+      "featured": false,
+      "badge": "Save $9",
+      "sku": "SL-GLOWSTARTER",
+      "short": "Serum, lip mask and glaze trio — the three that get bought together anyway.",
+      "description": "The skin and lip edit in one order, priced below the sum of the parts and packed to be gifted without rewrapping.",
+      "features": [
+        "Glass Skin Serum (30 ml)",
+        "Overnight Peptide Lip Mask",
+        "Lip Glaze Trio",
+        "Gift-ready packaging",
+        "Ships free"
+      ],
+      "delivery": "Ships in 1–2 business days.",
+      "checkout_url": "",
+      "subscribe": false,
+      "stock": null,
+      "reviews": [],
+      "variants": null,
+      "keywords": [
+        "skincare gift set",
+        "beauty bundle"
+      ],
+      "faq": [],
+      "demand_weight": 0.9,
+      "peak_months": [
+        11,
+        12,
+        2
+      ]
+    },
+    {
+      "slug": "aroma-stone-diffuser",
+      "name": "Aroma Stone Diffuser",
+      "category": "home",
+      "type": "physical",
+      "billing": "one_time",
+      "price": 24,
+      "compare_at": null,
+      "unit_cost": 7.0,
+      "featured": false,
+      "badge": null,
+      "sku": "SL-AROMASTONE",
+      "short": "No cords, no water, no beeping. A stone that holds scent.",
+      "description": "Matte ceramic on a small dish — a few drops of oil and it holds scent for days. Silent, flameless, cordless: the one diffuser that works on a bedside table.",
+      "features": [
+        "Matte ceramic, no power",
+        "Holds scent for days",
+        "Silent and flameless",
+        "Includes dish"
+      ],
+      "delivery": "Ships in 1–2 business days.",
+      "checkout_url": "",
+      "subscribe": false,
+      "stock": null,
+      "reviews": [],
+      "variants": null,
+      "keywords": [
+        "stone diffuser",
+        "passive diffuser",
+        "cordless aromatherapy"
+      ],
+      "faq": [],
+      "demand_weight": 0.62,
+      "peak_months": [
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "slug": "stack-rings-set",
+      "name": "Everyday Stack Rings",
+      "category": "jewelry",
+      "type": "physical",
+      "billing": "one_time",
+      "price": 26,
+      "compare_at": null,
+      "unit_cost": 6.2,
+      "featured": false,
+      "badge": null,
+      "sku": "SL-STACKRINGS",
+      "short": "Set of three 14k gold-fill bands. Shower in them, sleep in them.",
+      "description": "A plain, a twist and a beaded band designed to stack on one finger or spread across a hand. Gold-fill rather than plated, so water and soap don't turn them.",
+      "features": [
+        "Set of three",
+        "14k gold-fill, not plated",
+        "Water and shower safe",
+        "Sizes 5–9"
+      ],
+      "delivery": "Ships in 1–2 business days.",
+      "checkout_url": "",
+      "subscribe": false,
+      "stock": null,
+      "reviews": [],
+      "variants": [
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "keywords": [
+        "stacking rings",
+        "gold fill rings"
+      ],
+      "faq": [],
+      "demand_weight": 0.85,
+      "peak_months": [
+        11,
+        12,
+        2,
+        5
+      ]
+    },
+    {
+      "slug": "herringbone-chain",
+      "name": "Herringbone Chain",
+      "category": "jewelry",
+      "type": "physical",
+      "billing": "one_time",
+      "price": 32,
+      "compare_at": 44,
+      "unit_cost": 8.8,
+      "featured": false,
+      "badge": "Restocked",
+      "sku": "SL-HERRINGBONE",
+      "short": "The flat, liquid-looking chain that photographs better than it should.",
+      "description": "4 mm gold-fill herringbone with a reinforced clasp and a catch that doesn't spin to the front. Lies flat instead of kinking — the failure mode of every cheap version.",
+      "features": [
+        "4 mm flat herringbone",
+        "Reinforced, non-spinning clasp",
+        "Resists kinking",
+        "16\" or 18\""
+      ],
+      "delivery": "Ships in 1–2 business days.",
+      "checkout_url": "",
+      "subscribe": false,
+      "stock": null,
+      "reviews": [],
+      "variants": [
+        "16 inch",
+        "18 inch"
+      ],
+      "keywords": [
+        "herringbone necklace",
+        "flat chain necklace"
+      ],
+      "faq": [],
+      "demand_weight": 0.8,
+      "peak_months": [
+        11,
+        12,
+        2
+      ]
+    },
+    {
+      "slug": "pet-hair-remover",
+      "name": "Reusable Pet Hair Remover",
+      "category": "pet",
+      "type": "physical",
+      "billing": "one_time",
+      "price": 15,
+      "compare_at": null,
+      "unit_cost": 3.8,
+      "featured": false,
+      "badge": null,
+      "sku": "SL-PETHAIRREM",
+      "short": "One pass, no sticky sheets, no refills ever.",
+      "description": "A roller with a self-cleaning chamber — roll forward to lift, back to empty. No adhesive, nothing to buy again.",
+      "features": [
+        "Self-cleaning chamber",
+        "No refills or adhesive",
+        "Works on fabric and car seats",
+        "Empties into bin"
+      ],
+      "delivery": "Ships in 1–2 business days.",
+      "checkout_url": "",
+      "subscribe": false,
+      "stock": null,
+      "reviews": [],
+      "variants": null,
+      "keywords": [
+        "pet hair remover",
+        "lint roller reusable",
+        "dog hair remover"
+      ],
+      "faq": [],
+      "demand_weight": 0.64,
+      "peak_months": [
+        3,
+        4,
+        9,
+        10
+      ]
+    },
+    {
+      "slug": "peptide-lip-mask",
+      "name": "Overnight Peptide Lip Mask",
+      "category": "skincare",
+      "type": "physical",
+      "billing": "one_time",
+      "price": 16,
+      "compare_at": null,
+      "unit_cost": 4.9,
+      "featured": false,
+      "badge": "Refill favourite",
+      "sku": "SL-PEPTIDELIP",
+      "short": "The one you finish and immediately reorder.",
+      "description": "A thick occlusive balm with peptides and shea for overnight wear. It sits on top rather than soaking in — that's the point.",
+      "features": [
+        "Occlusive overnight formula",
+        "Peptides + shea",
+        "Fragrance-free",
+        "15 ml, ~8 weeks nightly"
+      ],
+      "delivery": "Ships in 1–2 business days.",
+      "checkout_url": "",
+      "subscribe": true,
+      "stock": null,
+      "reviews": [],
+      "variants": null,
+      "keywords": [
+        "lip mask",
+        "overnight lip treatment"
+      ],
+      "faq": [],
+      "demand_weight": 0.9,
+      "peak_months": [
+        11,
+        12,
+        1,
+        2
+      ]
+    },
+    {
+      "slug": "oil-mister",
+      "name": "Olive Oil Mister",
+      "category": "kitchen",
+      "type": "physical",
+      "billing": "one_time",
+      "price": 16,
+      "compare_at": null,
+      "unit_cost": 4.2,
+      "featured": false,
+      "badge": null,
+      "sku": "SL-OILMISTER",
+      "short": "An even spray instead of a glug.",
+      "description": "A glass mister with a pump that produces an actual mist rather than a dribble, and a filter that keeps it from clogging on real olive oil.",
+      "features": [
+        "Fine, even mist",
+        "Anti-clog filter",
+        "Glass body, 100 ml",
+        "Air pump, no propellant"
+      ],
+      "delivery": "Ships in 1–2 business days.",
+      "checkout_url": "",
+      "subscribe": false,
+      "stock": null,
+      "reviews": [],
+      "variants": null,
+      "keywords": [
+        "oil sprayer",
+        "olive oil mister",
+        "cooking spray bottle"
+      ],
+      "faq": [],
+      "demand_weight": 0.58,
+      "peak_months": [
+        1,
+        2,
+        9
+      ]
+    },
+    {
+      "slug": "huggie-hoops",
+      "name": "Huggie Hoops",
+      "category": "jewelry",
+      "type": "physical",
+      "billing": "one_time",
+      "price": 18,
+      "compare_at": null,
+      "unit_cost": 3.9,
+      "featured": false,
+      "badge": "Add-on",
+      "sku": "SL-HUGGIEHOOPS",
+      "short": "The pair you put in once and stop taking out.",
+      "description": "Small hinged huggies in gold-fill with a click closure that stays shut. Light enough to sleep in, plain enough to wear with everything.",
+      "features": [
+        "Hinged click closure",
+        "14k gold-fill",
+        "12 mm — sleepable",
+        "Sold as a pair"
+      ],
+      "delivery": "Ships in 1–2 business days.",
+      "checkout_url": "",
+      "subscribe": false,
+      "stock": null,
+      "reviews": [],
+      "variants": null,
+      "keywords": [
+        "huggie earrings",
+        "small gold hoops"
+      ],
+      "faq": [],
+      "demand_weight": 0.82,
+      "peak_months": [
+        11,
+        12,
+        2
+      ]
+    },
+    {
+      "slug": "sunset-lamp",
+      "name": "Sunset Projection Lamp",
+      "category": "home",
+      "type": "physical",
+      "billing": "one_time",
+      "price": 21,
+      "compare_at": 29,
+      "unit_cost": 7.4,
+      "featured": false,
+      "badge": null,
+      "sku": "SL-SUNSETLAMP",
+      "short": "The orange halo that turns a plain wall into a set.",
+      "description": "A rotating projection lamp throwing a warm sunset halo across a wall or ceiling. Adjustable head, USB-C and a dimmer — the part cheap ones leave out.",
+      "features": [
+        "Rotating, adjustable head",
+        "Dimmable",
+        "USB-C",
+        "Warm 2700K"
+      ],
+      "delivery": "Ships in 1–2 business days.",
+      "checkout_url": "",
+      "subscribe": false,
+      "stock": null,
+      "reviews": [],
+      "variants": null,
+      "keywords": [
+        "sunset lamp",
+        "projection lamp",
+        "aesthetic lighting"
+      ],
+      "faq": [],
+      "demand_weight": 0.78,
+      "peak_months": [
+        10,
+        11,
+        12,
+        1
+      ]
+    },
+    {
+      "slug": "cloud-slippers",
+      "name": "Cloud Slippers",
+      "category": "home",
+      "type": "physical",
+      "billing": "one_time",
+      "price": 23,
+      "compare_at": null,
+      "unit_cost": 6.8,
+      "featured": false,
+      "badge": null,
+      "sku": "SL-CLOUDSLIPPE",
+      "short": "The thick-soled recovery slipper that runs the For You page every winter.",
+      "description": "Injected EVA with a deep footbed and a non-marking sole. Machine washable, quiet on wood floors, and warm without being furry.",
+      "features": [
+        "Thick EVA footbed",
+        "Non-marking sole",
+        "Machine washable",
+        "Unisex sizing"
+      ],
+      "delivery": "Ships in 1–2 business days.",
+      "checkout_url": "",
+      "subscribe": false,
+      "stock": null,
+      "reviews": [],
+      "variants": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "keywords": [
+        "cloud slippers",
+        "recovery slides",
+        "house slippers"
+      ],
+      "faq": [],
+      "demand_weight": 0.74,
+      "peak_months": [
+        10,
+        11,
+        12,
+        1
+      ]
+    },
+    {
+      "slug": "magnesium-sleep-mist",
+      "name": "Magnesium Sleep Mist",
+      "category": "wellness",
+      "type": "physical",
+      "billing": "one_time",
+      "price": 22,
+      "compare_at": null,
+      "unit_cost": 6.1,
+      "featured": false,
+      "badge": null,
+      "sku": "SL-MAGNESIUMSL",
+      "short": "Pillow and body mist. Part of the wind-down, not a cure.",
+      "description": "Magnesium chloride with lavender and cedar for pillows, sheets and shoulders before bed. A ritual with a good scent — we won't tell you it fixes your sleep.",
+      "features": [
+        "Magnesium chloride + lavender",
+        "Pillow, linen and skin",
+        "No synthetic fragrance",
+        "100 ml"
+      ],
+      "delivery": "Ships in 1–2 business days.",
+      "checkout_url": "",
+      "subscribe": true,
+      "stock": null,
+      "reviews": [],
+      "variants": null,
+      "keywords": [
+        "magnesium spray",
+        "pillow mist",
+        "sleep spray"
+      ],
+      "faq": [],
+      "demand_weight": 0.72,
+      "peak_months": [
+        1,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "slug": "acupressure-mat",
+      "name": "Acupressure Mat & Pillow",
+      "category": "wellness",
+      "type": "physical",
+      "billing": "one_time",
+      "price": 34,
+      "compare_at": null,
+      "unit_cost": 11.0,
+      "featured": false,
+      "badge": null,
+      "sku": "SL-ACUPRESSURE",
+      "short": "Ten minutes on this beats an hour of intending to stretch.",
+      "description": "A spiked mat with matching neck pillow and carry bag. Uncomfortable for ninety seconds, then not — for backs that spend the day at a desk.",
+      "features": [
+        "Mat + neck pillow + bag",
+        "6,000+ contact points",
+        "Rolls flat for storage",
+        "Washable cover"
+      ],
+      "delivery": "Ships in 1–2 business days.",
+      "checkout_url": "",
+      "subscribe": false,
+      "stock": null,
+      "reviews": [],
+      "variants": null,
+      "keywords": [
+        "acupressure mat",
+        "shakti mat",
+        "back pain mat"
+      ],
+      "faq": [],
+      "demand_weight": 0.6,
+      "peak_months": [
+        1,
+        2,
+        11,
+        12
+      ]
+    },
+    {
+      "slug": "magsafe-stand",
+      "name": "Folding MagSafe Stand",
+      "category": "tech",
+      "type": "physical",
+      "billing": "one_time",
+      "price": 22,
+      "compare_at": 30,
+      "unit_cost": 6.5,
+      "featured": false,
+      "badge": null,
+      "sku": "SL-MAGSAFESTAN",
+      "short": "Folds flat, holds at any angle, doesn't creep down the desk.",
+      "description": "An aluminium folding stand with a magnetic ring, a weighted base and a hinge that holds position. Pocketable when folded.",
+      "features": [
+        "Magnetic hold",
+        "Weighted, non-creeping base",
+        "Folds flat",
+        "Aluminium"
+      ],
+      "delivery": "Ships in 1–2 business days.",
+      "checkout_url": "",
+      "subscribe": false,
+      "stock": null,
+      "reviews": [],
+      "variants": null,
+      "keywords": [
+        "magsafe stand",
+        "phone stand",
+        "folding phone holder"
+      ],
+      "faq": [],
+      "demand_weight": 0.66,
+      "peak_months": [
+        11,
+        12
+      ]
+    },
+    {
+      "slug": "scalp-massager",
+      "name": "Scalp Detox Massager",
+      "category": "hair",
+      "type": "physical",
+      "billing": "one_time",
+      "price": 14,
+      "compare_at": null,
+      "unit_cost": 3.6,
+      "featured": false,
+      "badge": null,
+      "sku": "SL-SCALPMASSAG",
+      "short": "Silicone bristles that actually reach the scalp.",
+      "description": "A contoured silicone brush for shampoo days — lifts buildup at the root and feels considerably better than fingertips. Grippy when wet.",
+      "features": [
+        "Soft silicone bristles",
+        "Grips when wet",
+        "Works with any shampoo",
+        "Hangs to dry"
+      ],
+      "delivery": "Ships in 1–2 business days.",
+      "checkout_url": "",
+      "subscribe": false,
+      "stock": null,
+      "reviews": [],
+      "variants": null,
+      "keywords": [
+        "scalp massager",
+        "shampoo brush",
+        "scalp scrubber"
+      ],
+      "faq": [],
+      "demand_weight": 0.7,
+      "peak_months": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "slug": "travel-jewelry-case",
+      "name": "Travel Jewelry Case",
+      "category": "bags",
+      "type": "physical",
+      "billing": "one_time",
+      "price": 21,
+      "compare_at": null,
+      "unit_cost": 5.9,
+      "featured": false,
+      "badge": null,
+      "sku": "SL-TRAVELJEWEL",
+      "short": "Chains go in untangled and come out untangled.",
+      "description": "A zip case with individual chain slots, ring rolls and a lidded pouch for studs. Small enough for a carry-on personal item.",
+      "features": [
+        "Individual chain slots",
+        "Ring roll + stud pouch",
+        "Zip closure",
+        "Carry-on sized"
+      ],
+      "delivery": "Ships in 1–2 business days.",
+      "checkout_url": "",
+      "subscribe": false,
+      "stock": null,
+      "reviews": [],
+      "variants": null,
+      "keywords": [
+        "jewelry travel case",
+        "chain organizer",
+        "jewelry roll"
+      ],
+      "faq": [],
+      "demand_weight": 0.58,
+      "peak_months": [
+        5,
+        6,
+        11,
+        12
+      ]
+    },
+    {
+      "slug": "slow-feeder-bowl",
+      "name": "Slow Feeder Bowl",
+      "category": "pet",
+      "type": "physical",
+      "billing": "one_time",
+      "price": 19,
+      "compare_at": null,
+      "unit_cost": 5.4,
+      "featured": false,
+      "badge": null,
+      "sku": "SL-SLOWFEEDER",
+      "short": "Turns a ten-second inhale into a ten-minute meal.",
+      "description": "A maze-bottom bowl with a non-slip base that stays put on tile. Dishwasher safe, and the ridges are rounded so it doesn't shred a soft nose.",
+      "features": [
+        "Maze bottom slows eating",
+        "Non-slip base",
+        "Dishwasher safe",
+        "Rounded ridges"
+      ],
+      "delivery": "Ships in 1–2 business days.",
+      "checkout_url": "",
+      "subscribe": false,
+      "stock": null,
+      "reviews": [],
+      "variants": null,
+      "keywords": [
+        "slow feeder dog bowl",
+        "puzzle bowl",
+        "pet bowl"
+      ],
+      "faq": [],
+      "demand_weight": 0.6,
+      "peak_months": [
+        1,
+        6,
+        12
+      ]
+    },
+    {
+      "slug": "adjustable-jump-rope",
+      "name": "Weighted Jump Rope",
+      "category": "fitness",
+      "type": "physical",
+      "billing": "one_time",
+      "price": 17,
+      "compare_at": null,
+      "unit_cost": 4.4,
+      "featured": false,
+      "badge": null,
+      "sku": "SL-ADJUSTABLEJ",
+      "short": "Weighted handles, tangle-free cable, adjusts in seconds.",
+      "description": "A steel-core cable with weighted handles and a bearing that doesn't seize after a month. Cuts to length without tools.",
+      "features": [
+        "Weighted handles",
+        "Sealed bearings",
+        "Tool-free length adjust",
+        "Tangle-resistant cable"
+      ],
+      "delivery": "Ships in 1–2 business days.",
+      "checkout_url": "",
+      "subscribe": false,
+      "stock": null,
+      "reviews": [],
+      "variants": null,
+      "keywords": [
+        "weighted jump rope",
+        "speed rope",
+        "home cardio"
+      ],
+      "faq": [],
+      "demand_weight": 0.55,
+      "peak_months": [
+        1,
+        2,
+        3
+      ]
+    }
+  ]
+}

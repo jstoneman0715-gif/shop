@@ -1,0 +1,11 @@
+# SOFTLAUNCH
+# NOTE: on a GitHub Pages *project* site this file lives under a path prefix and
+# crawlers only honour robots.txt at the domain root. It becomes effective the
+# moment the site moves to its own domain. Until then, indexing control comes
+# from each page's meta robots tag, and sitemaps are submitted in Search Console.
+User-agent: *
+Allow: /
+Disallow: /thank-you/
+
+Sitemap: https://softlaunch.example/sitemap.xml
+Sitemap: https://softlaunch.example/sitemap-index.xml

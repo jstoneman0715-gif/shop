@@ -1,0 +1,97 @@
+{
+  "_comment": "MASTER SITE CONFIG. Standalone brand, standalone repository, standalone URL. Product mix and price band chosen from 2026 TikTok Shop category data: beauty leads GMV, jewelry carries the best margin, and $15-30 is the conversion sweet spot.",
+  "store": {
+    "name": "SOFTLAUNCH",
+    "short_name": "Softlaunch",
+    "legal_entity": "Softlaunch (Julian Stoneman, sole proprietor)",
+    "tagline": "The drop everyone's about to have.",
+    "description": "Softlaunch is a short-form shop for the beauty, jewelry and everyday-object drops that go viral first and sell out second. Small edits, honest prices, free shipping over $35.",
+    "owner": "Julian Stoneman",
+    "support_email": "jstoneman0715@gmail.com",
+    "base_url": "https://softlaunch.example",
+    "path_prefix": "",
+    "store_root": "/",
+    "currency": "USD",
+    "currency_symbol": "$",
+    "country": "US",
+    "founded": "2026"
+  },
+  "share_url": "https://claude.ai/code/artifact/05e191e4-a6a4-4da6-9ba3-4a041986a368",
+  "_domain_note": "base_url is a placeholder until a domain is bought. share_url is what the in-page Share button copies — point it at the real domain once live. Both are single-line changes.",
+  "nav": [
+    {
+      "label": "Beauty",
+      "path": "#beauty"
+    },
+    {
+      "label": "Jewelry",
+      "path": "#jewelry"
+    },
+    {
+      "label": "Wellness",
+      "path": "#wellness"
+    },
+    {
+      "label": "Home",
+      "path": "#home"
+    }
+  ],
+  "brand": {
+    "accent": "#ff2e63",
+    "accent_soft": "#ff7aa2",
+    "bg": "#0b0b0f",
+    "bg_alt": "#15151d",
+    "text": "#f4f4f7"
+  },
+  "payments": {
+    "_comment": "Multiple ways to pay, in order of how little setup they need. PayPal.me and Cash App need only a username — the amount goes in the URL, so the cart can hand off a real total today. Stripe adds Visa/Mastercard/Amex, Cash App Pay, Apple Pay and Google Pay on a hosted page, and is what you want long term. Whatever is filled in here is what the checkout sheet offers; empty entries are hidden rather than shown broken.",
+    "card": {
+      "provider": "stripe_payment_links",
+      "enabled": true,
+      "publishable_key": "",
+      "note": "Visa, Mastercard, Amex, plus Apple Pay, Google Pay, Link and Cash App Pay on Stripe's hosted checkout. Per-product links live in products.json under checkout_url.",
+      "cart_link": ""
+    },
+    "paypal": {
+      "enabled": true,
+      "me_handle": "",
+      "note": "Your paypal.me handle only — no API keys. The cart opens paypal.me/<handle>/<total>. Test with $1 before going live."
+    },
+    "cashapp": {
+      "enabled": true,
+      "cashtag": "",
+      "note": "Your $Cashtag only. The cart opens cash.app/$<cashtag>/<total>. US only. Test with $1 before going live."
+    },
+    "fallback": {
+      "note": "With nothing configured the cart still produces a complete itemised order by email, so no button is ever dead."
+    },
+    "success_path": "/thank-you/"
+  },
+  "shipping": {
+    "free_over": 35,
+    "flat_rate": 4.95,
+    "note": "Free US shipping over $35. Flat $4.95 under."
+  },
+  "capture": {
+    "endpoint": "",
+    "method": "POST"
+  },
+  "analytics": {
+    "_comment": "First-party only. Blank means none.",
+    "endpoint": ""
+  },
+  "seo": {
+    "default_og_image": "/assets/og-store.svg",
+    "twitter_handle": "",
+    "google_site_verification": "",
+    "bing_site_verification": ""
+  },
+  "conversion": {
+    "_comment": "Levers rendered honestly — no invented ratings, sold counts, countdowns or stock numbers. Those get fabricated constantly in this category and they are the fastest way to lose a customer twice.",
+    "show_bundle_savings": true,
+    "show_money_back_days": 30,
+    "hero_product": "lip-glaze-trio",
+    "order_bump": "huggie-hoops",
+    "free_lead_magnet": null
+  }
+}

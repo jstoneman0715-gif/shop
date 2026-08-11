@@ -1,0 +1,22 @@
+name = "softlaunch-fulfilment"
+main = "worker.js"
+compatibility_date = "2026-01-01"
+
+# Digital products live in your own R2 bucket, one object per product slug:
+#   global-macro-pack.zip, country-reference-pack.zip, climate-baseline-pack.zip, ...
+[[r2_buckets]]
+binding = "PRODUCTS"
+bucket_name = "softlaunch-products"
+
+[vars]
+PUBLIC_WORKER_URL = "https://softlaunch-fulfilment.YOUR-SUBDOMAIN.workers.dev"
+FROM_EMAIL = "SOFTLAUNCH <orders@your-domain.com>"
+LINK_TTL_SECONDS = "1209600"
+# Optional fallback map for Stripe prices created without metadata.slug:
+# SLUG_BY_PRICE = '{"price_123":"global-macro-pack"}'
+
+# Secrets — set with `wrangler secret put NAME`, never in this file:
+#   STRIPE_SECRET_KEY         sk_live_...
+#   STRIPE_WEBHOOK_SECRET     whsec_...        (from the webhook endpoint page)
+#   DOWNLOAD_SIGNING_SECRET   any long random string you generate
+#   RESEND_API_KEY            re_...           (or swap sendEmail for your provider)

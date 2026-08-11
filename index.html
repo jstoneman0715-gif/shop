@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SOFTLAUNCH — Analysis-Ready Public Data</title>
+    <meta name="description" content="Shop Softlaunch: beauty, skincare, jewelry, wellness, home and kitchen edits in the $14-34 range. Free shipping over $35, 30-day returns, ships in 1-2 days." />
+    <meta name="keywords" content="lip gloss set, glass skin serum, gold fill jewelry, stacking rings, sunset lamp, fridge organiser, heatless curls, affordable beauty shop" />
+    <meta name="author" content="Julian Stoneman" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href="https://softlaunch.example/" />
+    <link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="SOFTLAUNCH" />
+    <meta property="og:url" content="https://softlaunch.example/" />
+    <meta property="og:title" content="SOFTLAUNCH — Analysis-Ready Public Data" />
+    <meta property="og:description" content="Shop Softlaunch: beauty, skincare, jewelry, wellness, home and kitchen edits in the $14-34 range. Free shipping over $35, 30-day returns, ships in 1-2 days." />
+    <meta property="og:image" content="https://softlaunch.example/assets/og-store.svg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="SOFTLAUNCH — Analysis-Ready Public Data" />
+    <meta name="twitter:description" content="Shop Softlaunch: beauty, skincare, jewelry, wellness, home and kitchen edits in the $14-34 range. Free shipping over $35, 30-day returns, ships in 1-2 days." />
+    <meta name="twitter:image" content="https://softlaunch.example/assets/og-store.svg" />
+    <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --accent: #ff2e63;
+      --accent-soft: #ff7aa2;
+      --bg: #0b0b0f;
+      --bg-alt: #15151d;
+      --text: #f4f4f7;
+      --muted: #a0a0a0;
+      --line: rgba(255, 107, 53, 0.22);
+      --card: linear-gradient(135deg, rgba(26,26,26,.85) 0%, rgba(42,42,42,.85) 100%);
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(180deg, var(--bg) 0%, var(--bg-alt) 100%);
+      background-attachment: fixed;
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); }
+    img { max-width: 100%; height: auto; }
+    .container { max-width: 1280px; margin: 0 auto; padding: 2rem 1rem 4rem; }
+    .skip { position: absolute; left: -9999px; }
+    .skip:focus { left: 1rem; top: 1rem; background: var(--accent); color: #000; padding: .6rem 1rem; border-radius: 6px; z-index: 99; }
+
+    .topbar {
+      background: rgba(255, 107, 53, 0.1);
+      border-bottom: 1px solid var(--line);
+      text-align: center; padding: .6rem 1rem; font-size: .9rem; color: #ffd9c7;
+    }
+    .topbar a { color: var(--accent); font-weight: 700; text-decoration: none; }
+    .topbar a:hover { text-decoration: underline; }
+
+    header.site {
+      text-align: center; padding: 2.5rem 1rem 2rem;
+      border-bottom: 3px solid var(--accent);
+    }
+    header.site .brandmark {
+      font-size: clamp(1.9rem, 7vw, 3.4rem); color: var(--accent);
+      text-transform: uppercase; letter-spacing: 3px; font-weight: 900; line-height: 1.1;
+    }
+    header.site .tagline { color: var(--muted); letter-spacing: 1px; margin-top: .6rem; font-weight: 300; font-size: clamp(.95rem, 2.5vw, 1.2rem); }
+
+    nav.pillars { display: flex; flex-wrap: wrap; gap: .6rem; justify-content: center; margin: 1.4rem auto 0; max-width: 1000px; }
+    nav.pillars a {
+      background: rgba(255,255,255,.05); border: 1px solid var(--line); color: var(--text);
+      padding: .5rem 1rem; border-radius: 999px; text-decoration: none; font-size: .88rem; font-weight: 600;
+      transition: all .2s ease;
+    }
+    nav.pillars a:hover { background: var(--accent); color: #000; }
+    nav.pillars a.active { background: var(--accent); color: #000; }
+
+    .breadcrumb { font-size: .85rem; color: var(--muted); margin-bottom: 1.5rem; }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--accent); }
+
+    .hero {
+      display: grid; grid-template-columns: 1.15fr .85fr; gap: 2rem; align-items: center;
+      background: var(--card); border: 1px solid var(--line); border-radius: 16px;
+      padding: clamp(1.5rem, 4vw, 3rem); margin-bottom: 3rem;
+      box-shadow: 0 12px 40px rgba(0,0,0,.35);
+    }
+    .hero h2 { font-size: clamp(1.5rem, 4vw, 2.4rem); color: #fff; line-height: 1.2; margin-bottom: 1rem; }
+    .hero p { color: #ccc; margin-bottom: 1.4rem; }
+    .hero-art { width: 100%; border-radius: 12px; border: 1px solid var(--line); }
+    @media (max-width: 860px) { .hero { grid-template-columns: 1fr; } }
+
+    .eyebrow { text-transform: uppercase; letter-spacing: 2px; font-size: .75rem; color: var(--accent); font-weight: 800; margin-bottom: .8rem; }
+
+    .btn {
+      display: inline-block; background: linear-gradient(135deg, var(--accent) 0%, var(--accent-soft) 100%);
+      color: #000; font-weight: 800; padding: .95rem 1.8rem; border-radius: 8px; text-decoration: none;
+      border: 2px solid transparent; cursor: pointer; font-size: 1rem; font-family: inherit;
+      transition: transform .2s cubic-bezier(.34,1.56,.64,1), box-shadow .2s ease;
+      box-shadow: 0 4px 15px rgba(255,107,53,.25);
+    }
+    .btn:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(255,107,53,.4); }
+    .btn.secondary { background: transparent; color: var(--accent); border-color: var(--accent); box-shadow: none; }
+    .btn.secondary:hover { background: rgba(255,107,53,.12); }
+    .btn.block { display: block; width: 100%; text-align: center; }
+
+    h2.section { font-size: clamp(1.3rem, 3vw, 1.9rem); color: var(--accent); text-transform: uppercase; letter-spacing: 2px; margin: 3rem 0 .4rem; }
+    .section-blurb { color: var(--muted); margin-bottom: 1.6rem; max-width: 70ch; }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 1.4rem; }
+
+    .card {
+      background: var(--card); border: 1px solid rgba(255,255,255,.07); border-radius: 14px;
+      overflow: hidden; display: flex; flex-direction: column;
+      transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+    }
+    .card:hover { transform: translateY(-5px); border-color: var(--line); box-shadow: 0 16px 34px rgba(0,0,0,.4); }
+    .card img { width: 100%; display: block; aspect-ratio: 1200 / 630; object-fit: cover; background: #111; }
+    .card-body { padding: 1.2rem; display: flex; flex-direction: column; gap: .6rem; flex: 1; }
+    .card h3 { font-size: 1.12rem; line-height: 1.3; }
+    .card h3 a { color: #fff; text-decoration: none; }
+    .card h3 a:hover { color: var(--accent); }
+    .card p { color: #b5b5b5; font-size: .92rem; flex: 1; }
+    .card-foot { display: flex; align-items: center; justify-content: space-between; gap: .8rem; margin-top: .4rem; }
+
+    .price { font-size: 1.35rem; font-weight: 900; color: #fff; white-space: nowrap; }
+    .price .suffix { font-size: .85rem; font-weight: 600; color: var(--muted); }
+    .price s { color: var(--muted); font-size: .95rem; font-weight: 500; margin-right: .4rem; }
+
+    .badge {
+      display: inline-block; background: rgba(255,107,53,.15); color: var(--accent);
+      border: 1px solid var(--line); border-radius: 999px; padding: .18rem .7rem;
+      font-size: .72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px;
+    }
+    .badge.free { background: rgba(80,200,120,.14); color: #6ee7a0; border-color: rgba(110,231,160,.3); }
+
+    .trust { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1rem; margin: 2.5rem 0; }
+    .trust div { background: rgba(255,255,255,.035); border: 1px solid rgba(255,255,255,.07); border-radius: 10px; padding: 1rem 1.2rem; }
+    .trust strong { display: block; color: var(--accent); font-size: .85rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: .25rem; }
+    .trust span { color: #b5b5b5; font-size: .9rem; }
+
+    .product { display: grid; grid-template-columns: 1fr 380px; gap: 2.5rem; align-items: start; }
+    @media (max-width: 900px) { .product { grid-template-columns: 1fr; } }
+    .product h1 { font-size: clamp(1.6rem, 4.5vw, 2.6rem); color: #fff; line-height: 1.15; margin: .6rem 0 .8rem; }
+    .lede { font-size: 1.1rem; color: #ccc; margin-bottom: 1.6rem; }
+    .prose p { margin-bottom: 1rem; color: #c8c8c8; }
+    .prose h2 { color: var(--accent); font-size: 1.25rem; margin: 2rem 0 .8rem; }
+    .prose h3 { color: #fff; font-size: 1.05rem; margin: 1.5rem 0 .6rem; }
+    .prose ul { margin: 0 0 1.2rem 1.2rem; color: #c8c8c8; }
+    .prose li { margin-bottom: .5rem; }
+    .feature-list { list-style: none; margin-left: 0 !important; }
+    .feature-list li { padding-left: 1.7rem; position: relative; }
+    .feature-list li::before { content: "▸"; color: var(--accent); position: absolute; left: .3rem; font-weight: 900; }
+
+    .buybox {
+      background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+      padding: 1.5rem; position: sticky; top: 1rem; box-shadow: 0 12px 34px rgba(0,0,0,.4);
+    }
+    .buybox .price { font-size: 2.2rem; display: block; margin-bottom: .2rem; }
+    .buybox .delivery { color: var(--muted); font-size: .88rem; margin: .8rem 0 1.2rem; }
+    .buybox .fineprint { color: var(--muted); font-size: .78rem; margin-top: 1rem; text-align: center; }
+    .buybox img { width: 100%; border-radius: 10px; margin-bottom: 1.2rem; border: 1px solid rgba(255,255,255,.08); }
+    select {
+      width: 100%; padding: .7rem .8rem; border-radius: 8px; background: #141414; color: var(--text);
+      border: 1px solid rgba(255,255,255,.15); font-family: inherit; font-size: .95rem; margin-bottom: 1rem;
+    }
+
+    details.faq { background: rgba(255,255,255,.035); border: 1px solid rgba(255,255,255,.07); border-radius: 10px; padding: 1rem 1.2rem; margin-bottom: .8rem; }
+    details.faq summary { cursor: pointer; font-weight: 700; color: #fff; }
+    details.faq summary::marker { color: var(--accent); }
+    details.faq p { margin-top: .7rem; color: #b8b8b8; }
+
+    .capture {
+      background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+      padding: clamp(1.4rem, 4vw, 2.4rem); margin: 3rem 0; text-align: center;
+    }
+    .capture h2 { color: var(--accent); font-size: clamp(1.2rem, 3vw, 1.7rem); margin-bottom: .6rem; }
+    .capture p { color: #c0c0c0; max-width: 60ch; margin: 0 auto 1.4rem; }
+    .capture form { display: flex; gap: .7rem; max-width: 520px; margin: 0 auto; flex-wrap: wrap; }
+    .capture input {
+      flex: 1 1 240px; padding: .9rem 1rem; border-radius: 8px; background: #141414; color: var(--text);
+      border: 1px solid rgba(255,255,255,.15); font-family: inherit; font-size: 1rem;
+    }
+    .capture .note { color: var(--muted); font-size: .8rem; margin-top: .9rem; }
+
+    .notice { background: rgba(255,107,53,.08); border: 1px solid var(--line); border-radius: 10px; padding: 1rem 1.2rem; color: #d8d8d8; font-size: .92rem; margin: 1rem 0; }
+
+    table.compare { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: .93rem; }
+    table.compare th, table.compare td { border-bottom: 1px solid rgba(255,255,255,.09); padding: .75rem .6rem; text-align: left; }
+    table.compare th { color: var(--accent); text-transform: uppercase; font-size: .75rem; letter-spacing: 1px; }
+    .table-wrap { overflow-x: auto; }
+
+    .filterbar {
+      display: flex; flex-wrap: wrap; gap: .6rem; align-items: center;
+      background: var(--card); border: 1px solid rgba(255,255,255,.08);
+      border-radius: 12px; padding: 1rem; margin: 0 0 1.6rem;
+      position: sticky; top: 0; z-index: 20; backdrop-filter: blur(8px);
+    }
+    .filterbar input[type="search"] {
+      flex: 1 1 240px; padding: .7rem .9rem; border-radius: 8px; background: #0b1119;
+      color: var(--text); border: 1px solid rgba(255,255,255,.15); font-family: inherit; font-size: .95rem;
+    }
+    .chip {
+      background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12); color: var(--text);
+      padding: .5rem .9rem; border-radius: 999px; font-size: .85rem; font-weight: 600;
+      cursor: pointer; font-family: inherit; transition: all .2s ease; white-space: nowrap;
+    }
+    .chip:hover { border-color: var(--accent); }
+    .chip[aria-pressed="true"] { background: var(--accent); color: #04120c; border-color: var(--accent); }
+    .filter-count { color: var(--muted); font-size: .85rem; margin-left: auto; }
+    .no-results { color: var(--muted); padding: 2rem 0; }
+
+    .stickybuy { display: none; }
+    @media (max-width: 900px) {
+      .stickybuy {
+        display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 40;
+        align-items: center; justify-content: space-between; gap: 1rem;
+        background: rgba(7,11,18,.96); border-top: 1px solid var(--line);
+        padding: .7rem 1rem; backdrop-filter: blur(10px);
+      }
+      .stickybuy .price { font-size: 1.3rem; }
+      .stickybuy .btn { padding: .8rem 1.2rem; font-size: .92rem; white-space: nowrap; }
+      .stickybuy .fineprint { display: none; }
+      body { padding-bottom: 4.5rem; }
+      .buybox { position: static; }
+    }
+
+    table.sources { width: 100%; border-collapse: collapse; margin: 1.2rem 0; font-size: .92rem; }
+    table.sources th, table.sources td { border-bottom: 1px solid rgba(255,255,255,.09); padding: .7rem .6rem; text-align: left; vertical-align: top; }
+    table.sources th { color: var(--accent); text-transform: uppercase; font-size: .72rem; letter-spacing: 1px; }
+
+    footer.site { border-top: 1px solid rgba(255,255,255,.09); margin-top: 3rem; padding: 2.5rem 1rem; text-align: center; color: var(--muted); font-size: .88rem; }
+    footer.site nav { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-bottom: 1.2rem; }
+    footer.site a { color: #b5b5b5; text-decoration: none; }
+    footer.site a:hover { color: var(--accent); }
+    footer.site .legal { max-width: 75ch; margin: 1rem auto 0; font-size: .8rem; line-height: 1.7; }
+</style>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "OnlineStore", "@id": "https://softlaunch.example/#store", "name": "SOFTLAUNCH", "url": "https://softlaunch.example/", "description": "Softlaunch is a short-form shop for the beauty, jewelry and everyday-object drops that go viral first and sell out second. Small edits, honest prices, free shipping over $35.", "email": "jstoneman0715@gmail.com", "image": "https://softlaunch.example/assets/og-store.svg", "logo": "https://softlaunch.example/assets/og-store.svg", "founder": {"@type": "Person", "name": "Julian Stoneman"}, "foundingDate": "2026", "currenciesAccepted": "USD", "paymentAccepted": "Credit Card, Debit Card", "areaServed": "Worldwide"}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "SOFTLAUNCH", "item": "https://softlaunch.example/"}]}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ItemList", "name": "SOFTLAUNCH products", "numberOfItems": 27, "itemListElement": [{"@type": "ListItem", "position": 1, "url": "https://softlaunch.example/mineral-spf-fluid/", "name": "Mineral SPF 50 Fluid"}, {"@type": "ListItem", "position": 2, "url": "https://softlaunch.example/glass-skin-serum/", "name": "Glass Skin Serum"}, {"@type": "ListItem", "position": 3, "url": "https://softlaunch.example/everyday-tote/", "name": "Everyday Canvas Tote"}, {"@type": "ListItem", "position": 4, "url": "https://softlaunch.example/fridge-organiser-set/", "name": "Fridge Organiser Set"}, {"@type": "ListItem", "position": 5, "url": "https://softlaunch.example/recovery-roller/", "name": "Cryo Recovery Roller"}, {"@type": "ListItem", "position": 6, "url": "https://softlaunch.example/braided-cable-3pack/", "name": "Braided Charge Cable 3-Pack"}, {"@type": "ListItem", "position": 7, "url": "https://softlaunch.example/heatless-curl-set/", "name": "Heatless Curl Set"}, {"@type": "ListItem", "position": 8, "url": "https://softlaunch.example/everyday-stack-bundle/", "name": "The Everyday Stack"}, {"@type": "ListItem", "position": 9, "url": "https://softlaunch.example/resistance-band-set/", "name": "Resistance Band Set"}, {"@type": "ListItem", "position": 10, "url": "https://softlaunch.example/lip-glaze-trio/", "name": "Lip Glaze Trio"}, {"@type": "ListItem", "position": 11, "url": "https://softlaunch.example/glow-starter-bundle/", "name": "The Glow Starter"}, {"@type": "ListItem", "position": 12, "url": "https://softlaunch.example/aroma-stone-diffuser/", "name": "Aroma Stone Diffuser"}, {"@type": "ListItem", "position": 13, "url": "https://softlaunch.example/stack-rings-set/", "name": "Everyday Stack Rings"}, {"@type": "ListItem", "position": 14, "url": "https://softlaunch.example/herringbone-chain/", "name": "Herringbone Chain"}, {"@type": "ListItem", "position": 15, "url": "https://softlaunch.example/pet-hair-remover/", "name": "Reusable Pet Hair Remover"}, {"@type": "ListItem", "position": 16, "url": "https://softlaunch.example/peptide-lip-mask/", "name": "Overnight Peptide Lip Mask"}, {"@type": "ListItem", "position": 17, "url": "https://softlaunch.example/oil-mister/", "name": "Olive Oil Mister"}, {"@type": "ListItem", "position": 18, "url": "https://softlaunch.example/huggie-hoops/", "name": "Huggie Hoops"}, {"@type": "ListItem", "position": 19, "url": "https://softlaunch.example/sunset-lamp/", "name": "Sunset Projection Lamp"}, {"@type": "ListItem", "position": 20, "url": "https://softlaunch.example/cloud-slippers/", "name": "Cloud Slippers"}, {"@type": "ListItem", "position": 21, "url": "https://softlaunch.example/magnesium-sleep-mist/", "name": "Magnesium Sleep Mist"}, {"@type": "ListItem", "position": 22, "url": "https://softlaunch.example/acupressure-mat/", "name": "Acupressure Mat & Pillow"}, {"@type": "ListItem", "position": 23, "url": "https://softlaunch.example/magsafe-stand/", "name": "Folding MagSafe Stand"}, {"@type": "ListItem", "position": 24, "url": "https://softlaunch.example/scalp-massager/", "name": "Scalp Detox Massager"}, {"@type": "ListItem", "position": 25, "url": "https://softlaunch.example/travel-jewelry-case/", "name": "Travel Jewelry Case"}, {"@type": "ListItem", "position": 26, "url": "https://softlaunch.example/slow-feeder-bowl/", "name": "Slow Feeder Bowl"}, {"@type": "ListItem", "position": 27, "url": "https://softlaunch.example/adjustable-jump-rope/", "name": "Weighted Jump Rope"}]}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How fast does it ship?", "acceptedAnswer": {"@type": "Answer", "text": "Orders placed before 2pm ship the same working day, otherwise the next one. Delivery is typically 2-5 working days in the US."}}, {"@type": "Question", "name": "What does shipping cost?", "acceptedAnswer": {"@type": "Answer", "text": "Free over $35. Under that it is a flat $4.95, shown before you pay."}}, {"@type": "Question", "name": "Can I return something?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — 30 days on unopened items, and anything faulty or wrong is replaced or refunded regardless of how long it has been."}}, {"@type": "Question", "name": "How does subscribe and save work?", "acceptedAnswer": {"@type": "Answer", "text": "Tick it on any refillable item and it repeats at your chosen interval with 15% off every order. Skip, pause or cancel any time from the link in your confirmation email."}}, {"@type": "Question", "name": "How can I pay?", "acceptedAnswer": {"@type": "Answer", "text": "Card (Visa, Mastercard, Amex), Apple Pay and Google Pay through our payment provider, plus PayPal and Cash App. Card details never touch this site."}}, {"@type": "Question", "name": "Why are there no star ratings on this site?", "acceptedAnswer": {"@type": "Answer", "text": "Because we would have had to invent them. Reviews go up when real customers leave them, and not before."}}]}</script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <header class="site">
+      <h1 class="brandmark"><a href="/" style="color:inherit;text-decoration:none">SOFTLAUNCH</a></h1>
+      <p class="tagline">The drop everyone&#x27;s about to have.</p>
+      <nav class="pillars"><a href="/" class="active">Store</a><a href="/#beauty">Beauty</a><a href="/#jewelry">Jewelry</a><a href="/#wellness">Wellness</a><a href="/#home">Home</a></nav>
+    </header>
+
+    <main id="main" class="container">
+
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Start here</p>
+          <h2>Lip Glaze Trio</h2>
+          <p>Three sheer, high-shine glazes that layer over anything. Non-sticky, actually.</p>
+          <p>Clear, warm nude and berry tint in one set. Cushiony mirror finish built to avoid the tacky pull that makes most glosses unwearable with hair…</p>
+          <p style="margin-bottom:1rem"><span class="price">$24<span class="suffix"></span></span></p>
+          <span style="display:inline-flex;flex-wrap:wrap;gap:.6rem">
+            <a class="btn" href="#get-free-report" data-product="lip-glaze-trio">Join the launch list</a>
+            <a class="btn secondary" href="/lip-glaze-trio/">What's inside</a>
+          </span>
+        </div>
+        <img class="hero-art" src="/assets/lip-glaze-trio.svg" alt="Lip Glaze Trio" width="1200" height="630" />
+      </section>
+
+      
+      <div class="trust">
+        <div><strong>Instant delivery</strong><span>Digital products download the moment payment clears.</span></div>
+        <div><strong>30-day guarantee</strong><span>If a digital product is not what was described, email for a refund.</span></div>
+        <div><strong>Secure checkout</strong><span>Card details go straight to Stripe. This site never sees them.</span></div>
+        <div><strong>Openly licensed</strong><span>Public-domain sources, compiled and documented — provenance named for every field.</span></div>
+      </div>
+
+
+      
+      <form class="filterbar" role="search" id="filters" onsubmit="return false">
+        <label for="q" class="skip">Search products</label>
+        <input type="search" id="q" placeholder="Search products — data, CSV, membership, hoodie…" autocomplete="off" />
+        <button type="button" class="chip" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" class="chip" data-filter="beauty" aria-pressed="false">Beauty</button><button type="button" class="chip" data-filter="skincare" aria-pressed="false">Skincare</button><button type="button" class="chip" data-filter="hair" aria-pressed="false">Hair</button><button type="button" class="chip" data-filter="jewelry" aria-pressed="false">Jewelry</button><button type="button" class="chip" data-filter="wellness" aria-pressed="false">Wellness</button><button type="button" class="chip" data-filter="fitness" aria-pressed="false">Fitness</button><button type="button" class="chip" data-filter="home" aria-pressed="false">Home</button><button type="button" class="chip" data-filter="kitchen" aria-pressed="false">Kitchen</button><button type="button" class="chip" data-filter="pet" aria-pressed="false">Pet</button><button type="button" class="chip" data-filter="tech" aria-pressed="false">Tech Accessories</button><button type="button" class="chip" data-filter="bags" aria-pressed="false">Bags &amp; Carry</button><button type="button" class="chip" data-filter="bundles" aria-pressed="false">Bundles</button>
+        <button type="button" class="chip" id="clear-filters" hidden>✕ Clear</button>
+        <span class="filter-count" id="filter-count" role="status"></span>
+      </form>
+      <p class="no-results" id="no-results" hidden>Nothing matches that — clear the filters to see the full catalogue.</p>
+
+
+      <h2 class="section" id="featured" data-featured>Featured</h2>
+      <p class="section-blurb">The products that do the most for a reader who wants to stop guessing and start measuring.</p>
+      <div class="grid" id="featured-grid" data-featured>
+      <article class="card" data-category="skincare" data-type="physical" data-search="mineral spf 50 fluid zinc spf that doesn&#x27;t cast, doesn&#x27;t pill, doesn&#x27;t smell like a pool. skincare mineral sunscreen spf 50 face no white cast sunscreen" data-price="26">
+        <a href="/mineral-spf-fluid/" aria-label="Mineral SPF 50 Fluid"><img src="/assets/mineral-spf-fluid.svg" alt="Mineral SPF 50 Fluid" loading="lazy" width="1200" height="630" /></a>
+        <div class="card-body">
+          <span class="badge">Peak season</span>
+          <h3><a href="/mineral-spf-fluid/">Mineral SPF 50 Fluid</a></h3>
+          <p>Zinc SPF that doesn&#x27;t cast, doesn&#x27;t pill, doesn&#x27;t smell like a pool.</p>
+          <div class="card-foot">
+            <span class="price">$26<span class="suffix"></span></span>
+            <a class="btn secondary" href="/mineral-spf-fluid/">Details</a>
+          </div>
+        </div>
+      </article>
+      <article class="card" data-category="skincare" data-type="physical" data-search="glass skin serum niacinamide and hyaluronic in a weightless layer. the look, minus the filter. skincare glass skin serum niacinamide serum hyaluronic serum" data-price="28">
+        <a href="/glass-skin-serum/" aria-label="Glass Skin Serum"><img src="/assets/glass-skin-serum.svg" alt="Glass Skin Serum" loading="lazy" width="1200" height="630" /></a>
+        <div class="card-body">
+          <span class="badge">Best seller</span>
+          <h3><a href="/glass-skin-serum/">Glass Skin Serum</a></h3>
+          <p>Niacinamide and hyaluronic in a weightless layer. The look, minus the filter.</p>
+          <div class="card-foot">
+            <span class="price"><s>$36</s>$28<span class="suffix"></span></span>
+            <a class="btn secondary" href="/glass-skin-serum/">Details</a>
+          </div>
+        </div>
+      </article>
+      <article class="card" data-category="bags" data-type="physical" data-search="everyday canvas tote structured enough to stand up on its own. bags canvas tote bag everyday tote structured tote" data-price="29">
+        <a href="/everyday-tote/" aria-label="Everyday Canvas Tote"><img src="/assets/everyday-tote.svg" alt="Everyday Canvas Tote" loading="lazy" width="1200" height="630" /></a>
+        <div class="card-body">
+          
+          <h3><a href="/everyday-tote/">Everyday Canvas Tote</a></h3>
+          <p>Structured enough to stand up on its own.</p>
+          <div class="card-foot">
+            <span class="price"><s>$38</s>$29<span class="suffix"></span></span>
+            <a class="btn secondary" href="/everyday-tote/">Details</a>
+          </div>
+        </div>
+      </article>
+      <article class="card" data-category="kitchen" data-type="physical" data-search="fridge organiser set six clear bins that make a fridge look like a restock video. kitchen fridge organizer pantry bins kitchen organization" data-price="27">
+        <a href="/fridge-organiser-set/" aria-label="Fridge Organiser Set"><img src="/assets/fridge-organiser-set.svg" alt="Fridge Organiser Set" loading="lazy" width="1200" height="630" /></a>
+        <div class="card-body">
+          
+          <h3><a href="/fridge-organiser-set/">Fridge Organiser Set</a></h3>
+          <p>Six clear bins that make a fridge look like a restock video.</p>
+          <div class="card-foot">
+            <span class="price"><s>$35</s>$27<span class="suffix"></span></span>
+            <a class="btn secondary" href="/fridge-organiser-set/">Details</a>
+          </div>
+        </div>
+      </article>
+      <article class="card" data-category="wellness" data-type="physical" data-search="cryo recovery roller freeze it, roll it. for puffy mornings and post-gym everything. wellness ice roller cryo roller face roller" data-price="18">
+        <a href="/recovery-roller/" aria-label="Cryo Recovery Roller"><img src="/assets/recovery-roller.svg" alt="Cryo Recovery Roller" loading="lazy" width="1200" height="630" /></a>
+        <div class="card-body">
+          
+          <h3><a href="/recovery-roller/">Cryo Recovery Roller</a></h3>
+          <p>Freeze it, roll it. For puffy mornings and post-gym everything.</p>
+          <div class="card-foot">
+            <span class="price"><s>$25</s>$18<span class="suffix"></span></span>
+            <a class="btn secondary" href="/recovery-roller/">Details</a>
+          </div>
+        </div>
+      </article>
+      <article class="card" data-category="tech" data-type="physical" data-search="braided charge cable 3-pack the cables that outlive the phone. tech usb c cable pack braided charging cable" data-price="18">
+        <a href="/braided-cable-3pack/" aria-label="Braided Charge Cable 3-Pack"><img src="/assets/braided-cable-3pack.svg" alt="Braided Charge Cable 3-Pack" loading="lazy" width="1200" height="630" /></a>
+        <div class="card-body">
+          
+          <h3><a href="/braided-cable-3pack/">Braided Charge Cable 3-Pack</a></h3>
+          <p>The cables that outlive the phone.</p>
+          <div class="card-foot">
+            <span class="price">$18<span class="suffix"></span></span>
+            <a class="btn secondary" href="/braided-cable-3pack/">Details</a>
+          </div>
+        </div>
+      </article>
+      </div>
+
+      <h2 class="section" id="beauty">Beauty</h2>
+      <p class="section-blurb">Lip, skin and the small formulas that show a result on camera.</p>
+      <div class="grid">
+      <article class="card" data-category="beauty" data-type="physical" data-search="lip glaze trio three sheer, high-shine glazes that layer over anything. non-sticky, actually. beauty lip gloss set viral lip gloss non sticky gloss" data-price="24">
+        <a href="/lip-glaze-trio/" aria-label="Lip Glaze Trio"><img src="/assets/lip-glaze-trio.svg" alt="Lip Glaze Trio" loading="lazy" width="1200" height="630" /></a>
+        <div class="card-body">
+          <span class="badge">New drop</span>
+          <h3><a href="/lip-glaze-trio/">Lip Glaze Trio</a></h3>
+          <p>Three sheer, high-shine glazes that layer over anything. Non-sticky, actually.</p>
+          <div class="card-foot">
+            <span class="price"><s>$33</s>$24<span class="suffix"></span></span>
+            <a class="btn secondary" href="/lip-glaze-trio/">Details</a>
+          </div>
+        </div>
+      </article>
+      </div>
+
+      <h2 class="section" id="skincare">Skincare</h2>
+      <p class="section-blurb">Serums, masks and SPF. Consumables — the repeat-purchase engine of the shop.</p>
+      <div class="grid">
+      <article class="card" data-category="skincare" data-type="physical" data-search="mineral spf 50 fluid zinc spf that doesn&#x27;t cast, doesn&#x27;t pill, doesn&#x27;t smell like a pool. skincare mineral sunscreen spf 50 face no white cast sunscreen" data-price="26">
+        <a href="/mineral-spf-fluid/" aria-label="Mineral SPF 50 Fluid"><img src="/assets/mineral-spf-fluid.svg" alt="Mineral SPF 50 Fluid" loading="lazy" width="1200" height="630" /></a>
+        <div class="card-body">
+          <span class="badge">Peak season</span>
+          <h3><a href="/mineral-spf-fluid/">Mineral SPF 50 Fluid</a></h3>
+          <p>Zinc SPF that doesn&#x27;t cast, doesn&#x27;t pill, doesn&#x27;t smell like a pool.</p>
+          <div class="card-foot">
+            <span class="price">$26<span class="suffix"></span></span>
+            <a class="btn secondary" href="/mineral-spf-fluid/">Details</a>
+          </div>
+        </div>
+      </article>
+      <article class="card" data-category="skincare" data-type="physical" data-search="glass skin serum niacinamide and hyaluronic in a weightless layer. the look, minus the filter. skincare glass skin serum niacinamide serum hyaluronic serum" data-price="28">
+        <a href="/glass-skin-serum/" aria-label="Glass Skin Serum"><img src="/assets/glass-skin-serum.svg" alt="Glass Skin Serum" loading="lazy" width="1200" height="630" /></a>
+        <div class="card-body">
+          <span class="badge">Best seller</span>
+          <h3><a href="/glass-skin-serum/">Glass Skin Serum</a></h3>
+          <p>Niacinamide and hyaluronic in a weightless layer. The look, minus the filter.</p>
+          <div class="card-foot">
+            <span class="price"><s>$36</s>$28<span class="suffix"></span></span>
+            <a class="btn secondary" href="/glass-skin-serum/">Details</a>
+          </div>
+        </div>
+      </article>
+      <article class="card" data-category="skincare" data-type="physical" data-search="overnight peptide lip mask the one you finish and immediately reorder. skincare lip mask overnight lip treatment" data-price="16">
+        <a href="/peptide-lip-mask/" aria-label="Overnight Peptide Lip Mask"><img src="/assets/peptide-lip-mask.svg" alt="Overnight Peptide Lip Mask" loading="lazy" width="1200" height="630" /></a>
+        <div class="card-body">
+          <span class="badge">Refill favourite</span>
+          <h3><a href="/peptide-lip-mask/">Overnight Peptide Lip Mask</a></h3>
+          <p>The one you finish and immediately reorder.</p>
+          <div class="card-foot">
+            <span class="price">$16<span class="suffix"></span></span>
+            <a class="btn secondary" href="/peptide-lip-mask/">Details</a>
+          </div>
+        </div>
+      </article>
+      </div>
+
+      <h2 class="section" id="hair">Hair</h2>
+      <p class="section-blurb">Heatless styling, scalp care and the tools that photograph well.</p>
+      <div class="grid">
+      <article class="card" data-category="hair" data-type="physical" data-search="heatless curl set sleep on it, wake up with a blowout. hair heatless curls curling ribbon overnight curls" data-price="19">
+        <a href="/heatless-curl-set/" aria-label="Heatless Curl Set"><img src="/assets/heatless-curl-set.svg" alt="Heatless Curl Set" loading="lazy" width="1200" height="630" /></a>
+        <div class="card-body">
+          
+          <h3><a href="/heatless-curl-set/">Heatless Curl Set</a></h3>
+          <p>Sleep on it, wake up with a blowout.</p>
+          <div class="card-foot">
+            <span class="price"><s>$26</s>$19<span class="suffix"></span></span>
+            <a class="btn secondary" href="/heatless-curl-set/">Details</a>
+          </div>
+        </div>
+      </article>
+      <article class="card" data-category="hair" data-type="physical" data-search="scalp detox massager silicone bristles that actually reach the scalp. hair scalp massager shampoo brush scalp scrubber" data-price="14">
+        <a href="/scalp-massager/" aria-label="Scalp Detox Massager"><img src="/assets/scalp-massager.svg" alt="Scalp Detox Massager" loading="lazy" width="1200" height="630" /></a>
+        <div class="card-body">
+          
+          <h3><a href="/scalp-massager/">Scalp Detox Massager</a></h3>
+          <p>Silicone bristles that actually reach the scalp.</p>
+          <div class="card-foot">
+            <span class="price">$14<span class="suffix"></span></span>
+            <a class="btn secondary" href="/scalp-massager/">Details</a>
+          </div>
+        </div>
+      </article>
+      </div>
+
+      <h2 class="section" id="jewelry">Jewelry</h2>
+      <p class="section-blurb">Gold-fill and stainless, water-safe, sleepable. The highest-margin shelf.</p>
+      <div class="grid">
+      <article class="card" data-category="jewelry" data-type="physical" data-search="everyday stack rings set of three 14k gold-fill bands. shower in them, sleep in them. jewelry stacking rings gold fill rings" data-price="26">
+        <a href="/stack-rings-set/" aria-label="Everyday Stack Rings"><img src="/assets/stack-rings-set.svg" alt="Everyday Stack Rings" loading="lazy" width="1200" height="630" /></a>
+        <div class="card-body">
+          
+          <h3><a href="/stack-rings-set/">Everyday Stack Rings</a></h3>
+          <p>Set of three 14k gold-fill bands. Shower in them, sleep in them.</p>
+          <div class="card-foot">
+            <span class="price">$26<span class="suffix"></span></span>
+            <a class="btn secondary" href="/stack-rings-set/">Details</a>
+          </div>
+        </div>
+      </article>
+      <article class="card" data-category="jewelry" data-type="physical" data-search="herringbone chain the flat, liquid-looking chain that photographs better than it should. jewelry herringbone necklace flat chain necklace" data-price="32">
+        <a href="/herringbone-chain/" aria-label="Herringbone Chain"><img src="/assets/herringbone-chain.svg" alt="Herringbone Chain" loading="lazy" width="1200" height="630" /></a>
+        <div class="card-body">
+          <span class="badge">Restocked</span>
+          <h3><a href="/herringbone-chain/">Herringbone Chain</a></h3>
+          <p>The flat, liquid-looking chain that photographs better than it should.</p>
+          <div class="card-foot">
+            <span class="price"><s>$44</s>$32<span class="suffix"></span></span>
+            <a class="btn secondary" href="/herringbone-chain/">Details</a>
+          </div>
+        </div>
+      </article>
+      <article class="card" data-category="jewelry" data-type="physical" data-search="huggie hoops the pair you put in once and stop taking out. jewelry huggie earrings small gold hoops" data-price="18">
+        <a href="/huggie-hoops/" aria-label="Huggie Hoops"><img src="/assets/huggie-hoops.svg" alt="Huggie Hoops" loading="lazy" width="1200" height="630" /></a>
+        <div class="card-body">
+          <span class="badge">Add-on</span>
+          <h3><a href="/huggie-hoops/">Huggie Hoops</a></h3>
+          <p>The pair you put in once and stop taking out.</p>
+          <div class="card-foot">
+            <span class="price">$18<span class="suffix"></span></span>
+            <a class="btn secondary" href="/huggie-hoops/">Details</a>
+          </div>
+        </div>
+      </article>
+      </div>
+
+      <h2 class="section" id="wellness">Wellness</h2>
+      <p class="section-blurb">Wind-down and recovery objects. No pills, no powders, no claims we can&#x27;t stand behind.</p>
+      <div class="grid">
+      <article class="card" data-category="wellness" data-type="physical" data-search="cryo recovery roller freeze it, roll it. for puffy mornings and post-gym everything. wellness ice roller cryo roller face roller" data-price="18">
+        <a href="/recovery-roller/" aria-label="Cryo Recovery Roller"><img src="/assets/recovery-roller.svg" alt="Cryo Recovery Roller" loading="lazy" width="1200" height="630" /></a>
+        <div class="card-body">
+          
+          <h3><a href="/recovery-roller/">Cryo Recovery Roller</a></h3>
+          <p>Freeze it, roll it. For puffy mornings and post-gym everything.</p>
+          <div class="card-foot">
+            <span class="price"><s>$25</s>$18<span class="suffix"></span></span>
+            <a class="btn secondary" href="/recovery-roller/">Details</a>
+          </div>
+        </div>
+      </article>
+      <article class="card" data-category="wellness" data-type="physical" data-search="magnesium sleep mist pillow and body mist. part of the wind-down, not a cure. wellness magnesium spray pillow mist sleep spray" data-price="22">
+        <a href="/magnesium-sleep-mist/" aria-label="Magnesium Sleep Mist"><img src="/assets/magnesium-sleep-mist.svg" alt="Magnesium Sleep Mist" loading="lazy" width="1200" height="630" /></a>
+        <div class="card-body">
+          
+          <h3><a href="/magnesium-sleep-mist/">Magnesium Sleep Mist</a></h3>
+          <p>Pillow and body mist. Part of the wind-down, not a cure.</p>
+          <div class="card-foot">
+            <span class="price">$22<span class="suffix"></span></span>
+            <a class="btn secondary" href="/magnesium-sleep-mist/">Details</a>
+          </div>
+        </div>
+      </article>
+      <article class="card" data-category="wellness" data-type="physical" data-search="acupressure mat &amp; pillow ten minutes on this beats an hour of intending to stretch. wellness acupressure mat shakti mat back pain mat" data-price="34">
+        <a href="/acupressure-mat/" aria-label="Acupressure Mat &amp; Pillow"><img src="/assets/acupressure-mat.svg" alt="Acupressure Mat &amp; Pillow" loading="lazy" width="1200" height="630" /></a>
+        <div class="card-body">
+          
+          <h3><a href="/acupressure-mat/">Acupressure Mat &amp; Pillow</a></h3>
+          <p>Ten minutes on this beats an hour of intending to stretch.</p>
+          <div class="card-foot">
+            <span class="price">$34<span class="suffix"></span></span>
+            <a class="btn secondary" href="/acupressure-mat/">Details</a>
+          </div>
+        </div>
+      </article>
+      </div>
+
+      <h2 class="section" id="fitness">Fitness</h2>
+      <p class="section-blurb">Small equipment that fits a flat and survives a January resolution.</p>
+      <div class="grid">
+      <article class="card" data-category="fitness" data-type="physical" data-search="resistance band set five fabric bands that don&#x27;t roll up your thigh. fitness resistance bands booty bands home workout bands" data-price="21">
+        <a href="/resistance-band-set/" aria-label="Resistance Band Set"><img src="/assets/resistance-band-set.svg" alt="Resistance Band Set" loading="lazy" width="1200" height="630" /></a>
+        <div class="card-body">
+          
+          <h3><a href="/resistance-band-set/">Resistance Band Set</a></h3>
+          <p>Five fabric bands that don&#x27;t roll up your thigh.</p>
+          <div class="card-foot">
+            <span class="price"><s>$29</s>$21<span class="suffix"></span></span>
+            <a class="btn secondary" href="/resistance-band-set/">Details</a>
+          </div>
+        </div>
+      </article>
+      <article class="card" data-category="fitness" data-type="physical" data-search="weighted jump rope weighted handles, tangle-free cable, adjusts in seconds. fitness weighted jump rope speed rope home cardio" data-price="17">
+        <a href="/adjustable-jump-rope/" aria-label="Weighted Jump Rope"><img src="/assets/adjustable-jump-rope.svg" alt="Weighted Jump Rope" loading="lazy" width="1200" height="630" /></a>
+        <div class="card-body">
+          
+          <h3><a href="/adjustable-jump-rope/">Weighted Jump Rope</a></h3>
+          <p>Weighted handles, tangle-free cable, adjusts in seconds.</p>
+          <div class="card-foot">
+            <span class="price">$17<span class="suffix"></span></span>
+            <a class="btn secondary" href="/adjustable-jump-rope/">Details</a>
+          </div>
+        </div>
+      </article>
+      </div>
+
+      <h2 class="section" id="home">Home</h2>
+      <p class="section-blurb">The light, the scent and the objects that make a room look like the video.</p>
+      <div class="grid">
+      <article class="card" data-category="home" data-type="physical" data-search="aroma stone diffuser no cords, no water, no beeping. a stone that holds scent. home stone diffuser passive diffuser cordless aromatherapy" data-price="24">
+        <a href="/aroma-stone-diffuser/" aria-label="Aroma Stone Diffuser"><img src="/assets/aroma-stone-diffuser.svg" alt="Aroma Stone Diffuser" loading="lazy" width="1200" height="630" /></a>
+        <div class="card-body">
+          
+          <h3><a href="/aroma-stone-diffuser/">Aroma Stone Diffuser</a></h3>
+          <p>No cords, no water, no beeping. A stone that holds scent.</p>
+          <div class="card-foot">
+            <span class="price">$24<span class="suffix"></span></span>
+            <a class="btn secondary" href="/aroma-stone-diffuser/">Details</a>
+          </div>
+        </div>
+      </article>
+      <article class="card" data-category="home" data-type="physical" data-search="sunset projection lamp the orange halo that turns a plain wall into a set. home sunset lamp projection lamp aesthetic lighting" data-price="21">
+        <a href="/sunset-lamp/" aria-label="Sunset Projection Lamp"><img src="/assets/sunset-lamp.svg" alt="Sunset Projection Lamp" loading="lazy" width="1200" height="630" /></a>
+        <div class="card-body">
+          
+          <h3><a href="/sunset-lamp/">Sunset Projection Lamp</a></h3>
+          <p>The orange halo that turns a plain wall into a set.</p>
+          <div class="card-foot">
+            <span class="price"><s>$29</s>$21<span class="suffix"></span></span>
+            <a class="btn secondary" href="/sunset-lamp/">Details</a>
+          </div>
+        </div>
+      </article>
+      <article class="card" data-category="home" data-type="physical" data-search="cloud slippers the thick-soled recovery slipper that runs the for you page every winter. home cloud slippers recovery slides house slippers" data-price="23">
+        <a href="/cloud-slippers/" aria-label="Cloud Slippers"><img src="/assets/cloud-slippers.svg" alt="Cloud Slippers" loading="lazy" width="1200" height="630" /></a>
+        <div class="card-body">
+          
+          <h3><a href="/cloud-slippers/">Cloud Slippers</a></h3>
+          <p>The thick-soled recovery slipper that runs the For You page every winter.</p>
+          <div class="card-foot">
+            <span class="price">$23<span class="suffix"></span></span>
+            <a class="btn secondary" href="/cloud-slippers/">Details</a>
+          </div>
+        </div>
+      </article>
+      </div>
+
+      <h2 class="section" id="kitchen">Kitchen</h2>
+      <p class="section-blurb">Single-job tools that solve a visible problem in under thirty seconds.</p>
+      <div class="grid">
+      <article class="card" data-category="kitchen" data-type="physical" data-search="fridge organiser set six clear bins that make a fridge look like a restock video. kitchen fridge organizer pantry bins kitchen organization" data-price="27">
+        <a href="/fridge-organiser-set/" aria-label="Fridge Organiser Set"><img src="/assets/fridge-organiser-set.svg" alt="Fridge Organiser Set" loading="lazy" width="1200" height="630" /></a>
+        <div class="card-body">
+          
+          <h3><a href="/fridge-organiser-set/">Fridge Organiser Set</a></h3>
+          <p>Six clear bins that make a fridge look like a restock video.</p>
+          <div class="card-foot">
+            <span class="price"><s>$35</s>$27<span class="suffix"></span></span>
+            <a class="btn secondary" href="/fridge-organiser-set/">Details</a>
+          </div>
+        </div>
+      </article>
+      <article class="card" data-category="kitchen" data-type="physical" data-search="olive oil mister an even spray instead of a glug. kitchen oil sprayer olive oil mister cooking spray bottle" data-price="16">
+        <a href="/oil-mister/" aria-label="Olive Oil Mister"><img src="/assets/oil-mister.svg" alt="Olive Oil Mister" loading="lazy" width="1200" height="630" /></a>
+        <div class="card-body">
+          
+          <h3><a href="/oil-mister/">Olive Oil Mister</a></h3>
+          <p>An even spray instead of a glug.</p>
+          <div class="card-foot">
+            <span class="price">$16<span class="suffix"></span></span>
+            <a class="btn secondary" href="/oil-mister/">Details</a>
+          </div>
+        </div>
+      </article>
+      </div>
+
+      <h2 class="section" id="pet">Pet</h2>
+      <p class="section-blurb">For the animal that outranks you in the household.</p>
+      <div class="grid">
+      <article class="card" data-category="pet" data-type="physical" data-search="reusable pet hair remover one pass, no sticky sheets, no refills ever. pet pet hair remover lint roller reusable dog hair remover" data-price="15">
+        <a href="/pet-hair-remover/" aria-label="Reusable Pet Hair Remover"><img src="/assets/pet-hair-remover.svg" alt="Reusable Pet Hair Remover" loading="lazy" width="1200" height="630" /></a>
+        <div class="card-body">
+          
+          <h3><a href="/pet-hair-remover/">Reusable Pet Hair Remover</a></h3>
+          <p>One pass, no sticky sheets, no refills ever.</p>
+          <div class="card-foot">
+            <span class="price">$15<span class="suffix"></span></span>
+            <a class="btn secondary" href="/pet-hair-remover/">Details</a>
+          </div>
+        </div>
+      </article>
+      <article class="card" data-category="pet" data-type="physical" data-search="slow feeder bowl turns a ten-second inhale into a ten-minute meal. pet slow feeder dog bowl puzzle bowl pet bowl" data-price="19">
+        <a href="/slow-feeder-bowl/" aria-label="Slow Feeder Bowl"><img src="/assets/slow-feeder-bowl.svg" alt="Slow Feeder Bowl" loading="lazy" width="1200" height="630" /></a>
+        <div class="card-body">
+          
+          <h3><a href="/slow-feeder-bowl/">Slow Feeder Bowl</a></h3>
+          <p>Turns a ten-second inhale into a ten-minute meal.</p>
+          <div class="card-foot">
+            <span class="price">$19<span class="suffix"></span></span>
+            <a class="btn secondary" href="/slow-feeder-bowl/">Details</a>
+          </div>
+        </div>
+      </article>
+      </div>
+
+      <h2 class="section" id="tech">Tech Accessories</h2>
+      <p class="section-blurb">Cables, stands and grips. Accessories only — no electronics we&#x27;d have to service.</p>
+      <div class="grid">
+      <article class="card" data-category="tech" data-type="physical" data-search="braided charge cable 3-pack the cables that outlive the phone. tech usb c cable pack braided charging cable" data-price="18">
+        <a href="/braided-cable-3pack/" aria-label="Braided Charge Cable 3-Pack"><img src="/assets/braided-cable-3pack.svg" alt="Braided Charge Cable 3-Pack" loading="lazy" width="1200" height="630" /></a>
+        <div class="card-body">
+          
+          <h3><a href="/braided-cable-3pack/">Braided Charge Cable 3-Pack</a></h3>
+          <p>The cables that outlive the phone.</p>
+          <div class="card-foot">
+            <span class="price">$18<span class="suffix"></span></span>
+            <a class="btn secondary" href="/braided-cable-3pack/">Details</a>
+          </div>
+        </div>
+      </article>
+      <article class="card" data-category="tech" data-type="physical" data-search="folding magsafe stand folds flat, holds at any angle, doesn&#x27;t creep down the desk. tech magsafe stand phone stand folding phone holder" data-price="22">
+        <a href="/magsafe-stand/" aria-label="Folding MagSafe Stand"><img src="/assets/magsafe-stand.svg" alt="Folding MagSafe Stand" loading="lazy" width="1200" height="630" /></a>
+        <div class="card-body">
+          
+          <h3><a href="/magsafe-stand/">Folding MagSafe Stand</a></h3>
+          <p>Folds flat, holds at any angle, doesn&#x27;t creep down the desk.</p>
+          <div class="card-foot">
+            <span class="price"><s>$30</s>$22<span class="suffix"></span></span>
+            <a class="btn secondary" href="/magsafe-stand/">Details</a>
+          </div>
+        </div>
+      </article>
+      </div>
+
+      <h2 class="section" id="bags">Bags &amp; Carry</h2>
+      <p class="section-blurb">Totes, pouches and the organisers that go inside them.</p>
+      <div class="grid">
+      <article class="card" data-category="bags" data-type="physical" data-search="everyday canvas tote structured enough to stand up on its own. bags canvas tote bag everyday tote structured tote" data-price="29">
+        <a href="/everyday-tote/" aria-label="Everyday Canvas Tote"><img src="/assets/everyday-tote.svg" alt="Everyday Canvas Tote" loading="lazy" width="1200" height="630" /></a>
+        <div class="card-body">
+          
+          <h3><a href="/everyday-tote/">Everyday Canvas Tote</a></h3>
+          <p>Structured enough to stand up on its own.</p>
+          <div class="card-foot">
+            <span class="price"><s>$38</s>$29<span class="suffix"></span></span>
+            <a class="btn secondary" href="/everyday-tote/">Details</a>
+          </div>
+        </div>
+      </article>
+      <article class="card" data-category="bags" data-type="physical" data-search="travel jewelry case chains go in untangled and come out untangled. bags jewelry travel case chain organizer jewelry roll" data-price="21">
+        <a href="/travel-jewelry-case/" aria-label="Travel Jewelry Case"><img src="/assets/travel-jewelry-case.svg" alt="Travel Jewelry Case" loading="lazy" width="1200" height="630" /></a>
+        <div class="card-body">
+          
+          <h3><a href="/travel-jewelry-case/">Travel Jewelry Case</a></h3>
+          <p>Chains go in untangled and come out untangled.</p>
+          <div class="card-foot">
+            <span class="price">$21<span class="suffix"></span></span>
+            <a class="btn secondary" href="/travel-jewelry-case/">Details</a>
+          </div>
+        </div>
+      </article>
+      </div>
+
+      <h2 class="section" id="bundles">Bundles</h2>
+      <p class="section-blurb">The combinations people already buy together, priced under the sum of the parts.</p>
+      <div class="grid">
+      <article class="card" data-category="bundles" data-type="physical" data-search="the everyday stack rings, huggies and the chain — the full stack, one order. bundles jewelry bundle gold jewelry set" data-price="49">
+        <a href="/everyday-stack-bundle/" aria-label="The Everyday Stack"><img src="/assets/everyday-stack-bundle.svg" alt="The Everyday Stack" loading="lazy" width="1200" height="630" /></a>
+        <div class="card-body">
+          <span class="badge">Save $9</span>
+          <h3><a href="/everyday-stack-bundle/">The Everyday Stack</a></h3>
+          <p>Rings, huggies and the chain — the full stack, one order.</p>
+          <div class="card-foot">
+            <span class="price"><s>$58</s>$49<span class="suffix"></span></span>
+            <a class="btn secondary" href="/everyday-stack-bundle/">Details</a>
+          </div>
+        </div>
+      </article>
+      <article class="card" data-category="bundles" data-type="physical" data-search="the glow starter serum, lip mask and glaze trio — the three that get bought together anyway. bundles skincare gift set beauty bundle" data-price="59">
+        <a href="/glow-starter-bundle/" aria-label="The Glow Starter"><img src="/assets/glow-starter-bundle.svg" alt="The Glow Starter" loading="lazy" width="1200" height="630" /></a>
+        <div class="card-body">
+          <span class="badge">Save $9</span>
+          <h3><a href="/glow-starter-bundle/">The Glow Starter</a></h3>
+          <p>Serum, lip mask and glaze trio — the three that get bought together anyway.</p>
+          <div class="card-foot">
+            <span class="price"><s>$68</s>$59<span class="suffix"></span></span>
+            <a class="btn secondary" href="/glow-starter-bundle/">Details</a>
+          </div>
+        </div>
+      </article>
+      </div>
+
+      <h2 class="section" id="compare">Everything in the store</h2>
+      <div class="table-wrap">
+        <table class="compare">
+          <thead><tr><th>Product</th><th>Category</th><th>Delivery</th><th>Price</th></tr></thead>
+          <tbody><tr><td>Mineral SPF 50 Fluid</td><td>Skincare</td><td>Ships in 1–2 business days.</td><td>$26</td></tr><tr><td>Glass Skin Serum</td><td>Skincare</td><td>Ships in 1–2 business days.</td><td>$28</td></tr><tr><td>Everyday Canvas Tote</td><td>Bags &amp; Carry</td><td>Ships in 1–2 business days.</td><td>$29</td></tr><tr><td>Fridge Organiser Set</td><td>Kitchen</td><td>Ships in 1–2 business days.</td><td>$27</td></tr><tr><td>Cryo Recovery Roller</td><td>Wellness</td><td>Ships in 1–2 business days.</td><td>$18</td></tr><tr><td>Braided Charge Cable 3-Pack</td><td>Tech Accessories</td><td>Ships in 1–2 business days.</td><td>$18</td></tr><tr><td>Heatless Curl Set</td><td>Hair</td><td>Ships in 1–2 business days.</td><td>$19</td></tr><tr><td>The Everyday Stack</td><td>Bundles</td><td>Ships in 1–2 business days.</td><td>$49</td></tr><tr><td>Resistance Band Set</td><td>Fitness</td><td>Ships in 1–2 business days.</td><td>$21</td></tr><tr><td>Lip Glaze Trio</td><td>Beauty</td><td>Ships in 1–2 business days.</td><td>$24</td></tr><tr><td>The Glow Starter</td><td>Bundles</td><td>Ships in 1–2 business days.</td><td>$59</td></tr><tr><td>Aroma Stone Diffuser</td><td>Home</td><td>Ships in 1–2 business days.</td><td>$24</td></tr><tr><td>Everyday Stack Rings</td><td>Jewelry</td><td>Ships in 1–2 business days.</td><td>$26</td></tr><tr><td>Herringbone Chain</td><td>Jewelry</td><td>Ships in 1–2 business days.</td><td>$32</td></tr><tr><td>Reusable Pet Hair Remover</td><td>Pet</td><td>Ships in 1–2 business days.</td><td>$15</td></tr><tr><td>Overnight Peptide Lip Mask</td><td>Skincare</td><td>Ships in 1–2 business days.</td><td>$16</td></tr><tr><td>Olive Oil Mister</td><td>Kitchen</td><td>Ships in 1–2 business days.</td><td>$16</td></tr><tr><td>Huggie Hoops</td><td>Jewelry</td><td>Ships in 1–2 business days.</td><td>$18</td></tr><tr><td>Sunset Projection Lamp</td><td>Home</td><td>Ships in 1–2 business days.</td><td>$21</td></tr><tr><td>Cloud Slippers</td><td>Home</td><td>Ships in 1–2 business days.</td><td>$23</td></tr><tr><td>Magnesium Sleep Mist</td><td>Wellness</td><td>Ships in 1–2 business days.</td><td>$22</td></tr><tr><td>Acupressure Mat &amp; Pillow</td><td>Wellness</td><td>Ships in 1–2 business days.</td><td>$34</td></tr><tr><td>Folding MagSafe Stand</td><td>Tech Accessories</td><td>Ships in 1–2 business days.</td><td>$22</td></tr><tr><td>Scalp Detox Massager</td><td>Hair</td><td>Ships in 1–2 business days.</td><td>$14</td></tr><tr><td>Travel Jewelry Case</td><td>Bags &amp; Carry</td><td>Ships in 1–2 business days.</td><td>$21</td></tr><tr><td>Slow Feeder Bowl</td><td>Pet</td><td>Ships in 1–2 business days.</td><td>$19</td></tr><tr><td>Weighted Jump Rope</td><td>Fitness</td><td>Ships in 1–2 business days.</td><td>$17</td></tr></tbody>
+        </table>
+      </div>
+
+
+      <section class="capture" id="get-free-report">
+        <h2>Get a real sample of the data, free</h2>
+        <p>Add%20me%20to%20the%20drop%20list.%0A%0A%28Sent%20from%20the%20site.%29</p>
+        <a class="btn" href="mailto:jstoneman0715@gmail.com?subject=Send%20me%20the%20free%20sample%20pack&body=Add%20me%20to%20the%20drop%20list.%0A%0A%28Sent%20from%20the%20site.%29">Email me the sample pack</a>
+        <p class="note">Your address is used to send the sample pack and release notes. It is never sold or shared, and every email unsubscribes in one click.</p>
+      </section>
+
+
+      <h2 class="section" id="faq">Store FAQ</h2>
+      <details class="faq"><summary>How fast does it ship?</summary><p>Orders placed before 2pm ship the same working day, otherwise the next one. Delivery is typically 2-5 working days in the US.</p></details><details class="faq"><summary>What does shipping cost?</summary><p>Free over $35. Under that it is a flat $4.95, shown before you pay.</p></details><details class="faq"><summary>Can I return something?</summary><p>Yes — 30 days on unopened items, and anything faulty or wrong is replaced or refunded regardless of how long it has been.</p></details><details class="faq"><summary>How does subscribe and save work?</summary><p>Tick it on any refillable item and it repeats at your chosen interval with 15% off every order. Skip, pause or cancel any time from the link in your confirmation email.</p></details><details class="faq"><summary>How can I pay?</summary><p>Card (Visa, Mastercard, Amex), Apple Pay and Google Pay through our payment provider, plus PayPal and Cash App. Card details never touch this site.</p></details><details class="faq"><summary>Why are there no star ratings on this site?</summary><p>Because we would have had to invent them. Reviews go up when real customers leave them, and not before.</p></details>
+
+      <h2 class="section" id="data-sources">How things get picked</h2>
+      <p class="section-blurb">Everything here has to clear the same bar before it goes on the shelf:
+      it has to solve something visible, survive normal use, and cost little enough that trying it is
+      not a decision. What is on this page is what cleared it.</p>
+      <div class="table-wrap">
+        <table class="sources">
+          <thead><tr><th>Test</th><th>What it means</th></tr></thead>
+          <tbody>
+            <tr><td>Does one job</td><td>If it needs explaining twice, it does not go on.</td></tr>
+            <tr><td>Survives real use</td><td>Water, sweat, dishwashers, being slept in — whichever applies.</td></tr>
+            <tr><td>Honest price</td><td>Priced from what it costs us, not from what the category charges.</td></tr>
+            <tr><td>Restockable</td><td>We only list what we can get again, so a favourite does not vanish.</td></tr>
+            <tr><td>No invented proof</td><td>No star ratings, sold counts or countdowns anywhere on this site.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="section-blurb">Something not right? Write to
+      <a href="mailto:jstoneman0715@gmail.com">jstoneman0715@gmail.com</a> are fixed and pushed to
+      everyone entitled to updates.</p>
+
+    </main>
+    <script>
+      (function () {
+        var form = document.getElementById('filters');
+        if (!form) return;
+        var query = document.getElementById('q');
+        var chips = form.querySelectorAll('.chip[data-filter]');
+        var count = document.getElementById('filter-count');
+        var empty = document.getElementById('no-results');
+        var clear = document.getElementById('clear-filters');
+        var active = 'all';
+
+        function apply() {
+          var term = query.value.trim().toLowerCase();
+          var shown = 0;
+          document.querySelectorAll('.grid:not([data-featured]) .card').forEach(function (card) {
+            var okCat = active === 'all' || card.dataset.category === active;
+            var okTerm = !term || (card.dataset.search || '').indexOf(term) !== -1;
+            var show = okCat && okTerm;
+            card.style.display = show ? '' : 'none';
+            if (show) shown++;
+          });
+          // Hide a section heading whose grid has nothing left in it.
+          document.querySelectorAll('.grid:not([data-featured])').forEach(function (grid) {
+            var any = [].slice.call(grid.children).some(function (c) { return c.style.display !== 'none'; });
+            var prev = grid.previousElementSibling;
+            grid.hidden = !any;
+            while (prev && (prev.classList.contains('section-blurb') || prev.classList.contains('section'))) {
+              prev.hidden = !any;
+              prev = prev.previousElementSibling;
+            }
+          });
+          var filtering = Boolean(term) || active !== 'all';
+          // The featured row repeats products shown below, so hide it while a
+          // filter is active rather than double-counting them.
+          document.querySelectorAll('[data-featured]').forEach(function (el) {
+            el.hidden = filtering;
+          });
+          count.textContent = filtering ? shown + (shown === 1 ? ' match' : ' matches') : '';
+          clear.hidden = !filtering;
+          empty.hidden = shown !== 0;
+        }
+
+        query.addEventListener('input', apply);
+        chips.forEach(function (chip) {
+          chip.addEventListener('click', function () {
+            active = chip.dataset.filter;
+            chips.forEach(function (c) { c.setAttribute('aria-pressed', String(c === chip)); });
+            apply();
+          });
+        });
+        clear.addEventListener('click', function () {
+          query.value = '';
+          active = 'all';
+          chips.forEach(function (c) { c.setAttribute('aria-pressed', String(c.dataset.filter === 'all')); });
+          apply();
+        });
+      })();
+    </script>
+
+    <footer class="site">
+      <nav><a href="/">Store</a><a href="/policies/shipping/">Delivery &amp; Shipping</a><a href="/policies/refunds/">Refunds</a><a href="/policies/terms/">Terms</a><a href="/policies/privacy/">Privacy</a><a href="mailto:jstoneman0715@gmail.com">Contact</a></nav>
+      <p>&copy; 2026 Softlaunch (Julian Stoneman, sole proprietor). All rights reserved.</p>
+      <p class="legal">
+        Softlaunch sells beauty, jewelry, wellness and home goods. Nothing here is a medical
+        or cosmetic claim beyond what the product page states, and results vary between people.
+        Ingredients and materials are listed on every product page — check them against your own
+        sensitivities before buying. Prices in USD.
+      </p>
+    </footer>
+  </body>
+</html>
