@@ -57,10 +57,14 @@ e = html.escape
 
 def url(path: str) -> str:
     """Site-root-relative URL, honouring the GitHub Pages project prefix."""
+    if path.startswith("http://") or path.startswith("https://"):
+        return path
     return f"{PREFIX}{path}"
 
 
 def abs_url(path: str) -> str:
+    if path.startswith("http://") or path.startswith("https://"):
+        return path
     return f"{BASE}{path}"
 
 
@@ -528,7 +532,7 @@ def product_card(product: dict) -> str:
         [product["name"], product["short"], product["category"]] + product.get("keywords", [])
     ).lower()
     return f"""      <article class="card" data-category="{e(product['category'])}" data-type="{e(product['type'])}" data-search="{e(haystack)}" data-price="{product['price']}">
-        <a href="{href}" aria-label="{e(product['name'])}"><img src="{url(SR + 'assets/' + product['slug'] + '.svg')}" alt="{e(product['name'])}" loading="lazy" width="1200" height="630" /></a>
+        <a href="{href}" aria-label="{e(product['name'])}"><img src="{url(product.get('image') or SR + 'assets/' + product['slug'] + '.svg')}" alt="{e(product['name'])}" loading="lazy" width="1200" height="630" /></a>
         <div class="card-body">
           {badge}
           <h3><a href="{href}">{e(product['name'])}</a></h3>
@@ -656,7 +660,7 @@ def product_jsonld(product: dict) -> dict:
         "name": product["name"],
         "sku": product["sku"],
         "description": product["description"],
-        "image": [abs_url(f"{SR}assets/{product['slug']}.svg")],
+        "image": [abs_url(product.get('image') or f"{SR}assets/{product['slug']}.svg")],
         "brand": {"@type": "Brand", "name": SHORT},
         "category": next(c["name"] for c in CATEGORIES if c["slug"] == product["category"]),
         "offers": offer,
@@ -812,7 +816,7 @@ def build_storefront() -> None:
             <a class="btn secondary" href="{url(SR + hero['slug'] + '/')}">What's inside</a>
           </span>
         </div>
-        <img class="hero-art" src="{url(SR + 'assets/' + hero['slug'] + '.svg')}" alt="{e(hero['name'])}" width="1200" height="630" />
+        <img class="hero-art" src="{url(hero.get('image') or SR + 'assets/' + hero['slug'] + '.svg')}" alt="{e(hero['name'])}" width="1200" height="630" />
       </section>
 
       {trust_row()}
@@ -973,7 +977,7 @@ def build_product(product: dict) -> None:
         title=title,
         description=desc,
         canonical_path=f"{SR}{product['slug']}/",
-        og_image=f"{SR}assets/{product['slug']}.svg",
+        og_image=product.get('image') or f"{SR}assets/{product['slug']}.svg",
         keywords=", ".join(product.get("keywords", [])),
         jsonld=jsonld,
     )}{site_header()}
@@ -1006,7 +1010,7 @@ def build_product(product: dict) -> None:
         </div>
 
         <aside class="buybox">
-          <img src="{url(SR + 'assets/' + product['slug'] + '.svg')}" alt="{e(product['name'])}" width="1200" height="630" />
+          <img src="{url(product.get('image') or SR + 'assets/' + product['slug'] + '.svg')}" alt="{e(product['name'])}" width="1200" height="630" />
           <span class="price">{compare}{e(money(product['price']))}<span class="suffix">{e(price_suffix(product))}</span></span>
           <p class="delivery">{e(product['delivery'])}</p>
           {variants}
