@@ -33,11 +33,14 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Test the dataset pipeline
-        run: python3 tools/test_dataset.py
+      - name: Test the ranking logic
+        run: python3 tools/test_catalogue.py
 
       - name: Generate site
         run: python3 tools/build_site.py
+
+      - name: Generate the single-file storefront
+        run: python3 tools/build_onepage.py
 
       - name: Validate site
         run: python3 tools/check_site.py
