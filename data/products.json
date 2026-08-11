@@ -77,7 +77,7 @@
       "billing": "one_time",
       "price": 26,
       "compare_at": null,
-      "unit_cost": 8.0,
+      "unit_cost": 8,
       "featured": true,
       "badge": "Peak season",
       "sku": "SL-MINERALSPF",
@@ -108,7 +108,8 @@
         6,
         7,
         8
-      ]
+      ],
+      "image": "https://images.unsplash.com/photo-1521223344201-d169129f7b7d?w=1200&h=630&fit=crop&q=80&auto=format"
     },
     {
       "slug": "glass-skin-serum",
@@ -142,12 +143,13 @@
         "hyaluronic serum"
       ],
       "faq": [],
-      "demand_weight": 1.0,
+      "demand_weight": 1,
       "peak_months": [
         1,
         9,
         10
-      ]
+      ],
+      "image": "https://images.unsplash.com/photo-1573575155376-b5010099301b?w=1200&h=630&fit=crop&q=80&auto=format"
     },
     {
       "slug": "everyday-tote",
@@ -187,7 +189,8 @@
         9,
         11,
         12
-      ]
+      ],
+      "image": "https://images.unsplash.com/photo-1535981444082-2a5dc0548ef3?w=1200&h=630&fit=crop&q=80&auto=format"
     },
     {
       "slug": "fridge-organiser-set",
@@ -197,7 +200,7 @@
       "billing": "one_time",
       "price": 27,
       "compare_at": 35,
-      "unit_cost": 9.0,
+      "unit_cost": 9,
       "featured": true,
       "badge": null,
       "sku": "SL-FRIDGEORGAN",
@@ -226,7 +229,8 @@
         1,
         8,
         9
-      ]
+      ],
+      "image": "https://images.unsplash.com/photo-1783094270149-8db5cdb15744?w=1200&h=630&fit=crop&q=80&auto=format"
     },
     {
       "slug": "recovery-roller",
@@ -236,7 +240,7 @@
       "billing": "one_time",
       "price": 18,
       "compare_at": 25,
-      "unit_cost": 5.0,
+      "unit_cost": 5,
       "featured": true,
       "badge": null,
       "sku": "SL-RECOVERYROL",
@@ -266,7 +270,8 @@
         6,
         7,
         8
-      ]
+      ],
+      "image": "https://images.unsplash.com/photo-1578747763484-51b21a33e4fa?w=1200&h=630&fit=crop&q=80&auto=format"
     },
     {
       "slug": "braided-cable-3pack",
@@ -304,7 +309,8 @@
         11,
         12,
         8
-      ]
+      ],
+      "image": "https://images.unsplash.com/photo-1572721546624-05bf65ad7679?w=1200&h=630&fit=crop&q=80&auto=format"
     },
     {
       "slug": "heatless-curl-set",
@@ -344,7 +350,8 @@
         10,
         11,
         12
-      ]
+      ],
+      "image": "https://images.unsplash.com/photo-1611590027211-b954fd027b51?w=1200&h=630&fit=crop&q=80&auto=format"
     },
     {
       "slug": "everyday-stack-bundle",
@@ -389,7 +396,8 @@
         11,
         12,
         2
-      ]
+      ],
+      "image": "https://images.unsplash.com/photo-1643168186368-c42359c82573?w=1200&h=630&fit=crop&q=80&auto=format"
     },
     {
       "slug": "resistance-band-set",
@@ -399,7 +407,7 @@
       "billing": "one_time",
       "price": 21,
       "compare_at": 29,
-      "unit_cost": 6.0,
+      "unit_cost": 6,
       "featured": false,
       "badge": null,
       "sku": "SL-RESISTANCEB",
@@ -429,7 +437,8 @@
         2,
         3,
         9
-      ]
+      ],
+      "image": "https://images.unsplash.com/photo-1515775538093-d2d95c5ee4f5?w=1200&h=630&fit=crop&q=80&auto=format"
     },
     {
       "slug": "lip-glaze-trio",
@@ -468,7 +477,8 @@
         11,
         12,
         2
-      ]
+      ],
+      "image": "https://images.unsplash.com/photo-1631214524115-9942bf927d4a?w=1200&h=630&fit=crop&q=80&auto=format"
     },
     {
       "slug": "glow-starter-bundle",
@@ -507,7 +517,8 @@
         11,
         12,
         2
-      ]
+      ],
+      "image": "https://images.unsplash.com/photo-1642005799634-5d1bc2829b03?w=1200&h=630&fit=crop&q=80&auto=format"
     },
     {
       "slug": "aroma-stone-diffuser",
@@ -517,7 +528,7 @@
       "billing": "one_time",
       "price": 24,
       "compare_at": null,
-      "unit_cost": 7.0,
+      "unit_cost": 7,
       "featured": false,
       "badge": null,
       "sku": "SL-AROMASTONE",
@@ -547,7 +558,8 @@
         10,
         11,
         12
-      ]
+      ],
+      "image": "https://images.unsplash.com/photo-1732229035217-e7e42f61af4b?w=1200&h=630&fit=crop&q=80&auto=format"
     },
     {
       "slug": "stack-rings-set",
@@ -592,7 +604,8 @@
         12,
         2,
         5
-      ]
+      ],
+      "image": "https://images.unsplash.com/photo-1731586249471-82bb9b2f769a?w=1200&h=630&fit=crop&q=80&auto=format"
     },
     {
       "slug": "herringbone-chain",
@@ -633,7 +646,8 @@
         11,
         12,
         2
-      ]
+      ],
+      "image": "https://images.unsplash.com/photo-1633555234296-657a18d8b81a?w=1200&h=630&fit=crop&q=80&auto=format"
     },
     {
       "slug": "pet-hair-remover",
@@ -673,7 +687,8 @@
         4,
         9,
         10
-      ]
+      ],
+      "image": "https://images.unsplash.com/photo-1610123172037-c970be4d24d7?w=1200&h=630&fit=crop&q=80&auto=format"
     },
     {
       "slug": "peptide-lip-mask",
@@ -712,7 +727,8 @@
         12,
         1,
         2
-      ]
+      ],
+      "image": "https://images.unsplash.com/photo-1567102110161-6a69e7df77f5?w=1200&h=630&fit=crop&q=80&auto=format"
     },
     {
       "slug": "oil-mister",
@@ -751,7 +767,8 @@
         1,
         2,
         9
-      ]
+      ],
+      "image": "https://images.unsplash.com/photo-1552592074-ea7a91b851b3?w=1200&h=630&fit=crop&q=80&auto=format"
     },
     {
       "slug": "huggie-hoops",
@@ -789,7 +806,8 @@
         11,
         12,
         2
-      ]
+      ],
+      "image": "https://images.unsplash.com/photo-1777999763640-b228fe3192de?w=1200&h=630&fit=crop&q=80&auto=format"
     },
     {
       "slug": "sunset-lamp",
@@ -829,7 +847,8 @@
         11,
         12,
         1
-      ]
+      ],
+      "image": "https://images.unsplash.com/photo-1708232981795-2baec1d6687b?w=1200&h=630&fit=crop&q=80&auto=format"
     },
     {
       "slug": "cloud-slippers",
@@ -874,7 +893,8 @@
         11,
         12,
         1
-      ]
+      ],
+      "image": "https://images.unsplash.com/photo-1543420629-5350879dd4cd?w=1200&h=630&fit=crop&q=80&auto=format"
     },
     {
       "slug": "magnesium-sleep-mist",
@@ -914,7 +934,8 @@
         10,
         11,
         12
-      ]
+      ],
+      "image": "https://images.unsplash.com/photo-1617537230936-bb8c9327e84f?w=1200&h=630&fit=crop&q=80&auto=format"
     },
     {
       "slug": "acupressure-mat",
@@ -924,7 +945,7 @@
       "billing": "one_time",
       "price": 34,
       "compare_at": null,
-      "unit_cost": 11.0,
+      "unit_cost": 11,
       "featured": false,
       "badge": null,
       "sku": "SL-ACUPRESSURE",
@@ -954,7 +975,8 @@
         2,
         11,
         12
-      ]
+      ],
+      "image": "https://images.unsplash.com/photo-1673974399127-d30fd7797a91?w=1200&h=630&fit=crop&q=80&auto=format"
     },
     {
       "slug": "magsafe-stand",
@@ -992,7 +1014,8 @@
       "peak_months": [
         11,
         12
-      ]
+      ],
+      "image": "https://images.unsplash.com/photo-1778854096628-0266421cac9e?w=1200&h=630&fit=crop&q=80&auto=format"
     },
     {
       "slug": "scalp-massager",
@@ -1031,7 +1054,8 @@
         1,
         2,
         3
-      ]
+      ],
+      "image": "https://images.unsplash.com/photo-1767953829433-1e405b6889de?w=1200&h=630&fit=crop&q=80&auto=format"
     },
     {
       "slug": "travel-jewelry-case",
@@ -1071,7 +1095,8 @@
         6,
         11,
         12
-      ]
+      ],
+      "image": "https://images.unsplash.com/photo-1708221269975-cc31682c7fc4?w=1200&h=630&fit=crop&q=80&auto=format"
     },
     {
       "slug": "slow-feeder-bowl",
@@ -1110,7 +1135,8 @@
         1,
         6,
         12
-      ]
+      ],
+      "image": "https://images.unsplash.com/photo-1679224106783-c21b1841412a?w=1200&h=630&fit=crop&q=80&auto=format"
     },
     {
       "slug": "adjustable-jump-rope",
@@ -1149,7 +1175,8 @@
         1,
         2,
         3
-      ]
+      ],
+      "image": "https://images.unsplash.com/photo-1516876345887-6dd74f80787a?w=1200&h=630&fit=crop&q=80&auto=format"
     }
   ]
 }
