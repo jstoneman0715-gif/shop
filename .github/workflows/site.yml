@@ -67,8 +67,11 @@ jobs:
         with:
           path: .
 
+      # Best effort only: telling Bing and Yandex about new URLs must never be
+      # able to fail the job that publishes the site.
       - name: Notify search engines
         if: steps.commit.outputs.changed == 'true' || github.event_name == 'schedule'
+        continue-on-error: true
         run: python3 tools/submit_indexnow.py
 
   deploy:

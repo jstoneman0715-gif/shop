@@ -24,7 +24,7 @@ import urllib.request
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ENDPOINT = "https://api.indexnow.org/IndexNow"
 
-with open(os.path.join(ROOT, "shop", "data", "config.json"), encoding="utf-8") as fh:
+with open(os.path.join(ROOT, "data", "config.json"), encoding="utf-8") as fh:
     BASE = json.load(fh)["store"]["base_url"].rstrip("/")
 
 HOST = BASE.split("//", 1)[1].split("/", 1)[0]
@@ -95,6 +95,8 @@ def main() -> int:
               f"{BASE}/{key}.txt is reachable.", file=sys.stderr)
     except urllib.error.URLError as exc:
         print(f"IndexNow unreachable ({exc.reason}) — skipping.", file=sys.stderr)
+    except Exception as exc:  # noqa: BLE001 - notifying engines is best effort
+        print(f"IndexNow submission failed ({exc!r}) — skipping.", file=sys.stderr)
     return 0
 
 
