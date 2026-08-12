@@ -48,6 +48,12 @@ effect immediately.
 - **One-tap add, one sheet to pay.** Nothing reloads, the bag survives a refresh,
   and every tap target clears 44px.
 
+## Getting started
+
+New to this? [ACCOUNTS.md](ACCOUNTS.md) is the ordered checklist for every
+account you need, shortest path first. Steps 0–2 are an afternoon and end with
+the shop able to take money.
+
 ## Payments
 
 Card (Visa/Mastercard/Amex plus Apple Pay and Google Pay) through Stripe, PayPal
