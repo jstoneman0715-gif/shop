@@ -944,7 +944,13 @@ def build_product(product: dict) -> None:
     variants = ""
     if product.get("variants"):
         opts = "".join(f"<option>{e(v)}</option>" for v in product["variants"])
-        label = "Size" if product["category"] == "apparel" else "Option"
+        # Sizes look like S/M/L or a bare number; anything else is a generic option.
+        values = product["variants"]
+        sizeish = all(
+            v.upper() in {"XS", "S", "M", "L", "XL", "2XL", "3XL"} or v.replace(".", "").isdigit()
+            for v in values
+        )
+        label = "Size" if sizeish else "Option"
         variants = f'<label for="variant" style="display:block;font-size:.85rem;color:#a0a0a0;margin-bottom:.35rem">{label}</label><select id="variant" name="variant">{opts}</select>'
 
     compare = f"<s>{e(money(product['compare_at']))}</s>" if product.get("compare_at") else ""
@@ -1088,54 +1094,64 @@ def build_thank_you() -> None:
 
 POLICIES = {
     "refunds": (
-        "Refund Policy",
-        "How refunds work on digital downloads, memberships and made-to-order apparel.",
+        "Returns & Refunds",
+        "How returns work on unopened items, cosmetics and anything faulty.",
         """
-        <h2>Returns</h2>
-        <p>Unopened items can be returned within {days} days of delivery for a full refund. Opened
-        cosmetics can be returned within the same window if they caused a reaction — tell us what
-        happened and we will refund it, no photograph of your face required.</p>
+        <h2>Unopened items</h2>
+        <p>Send anything back unopened and unused within {days} days of delivery for a full refund of
+        the item price. Email {email} first so we can give you a return address and watch for it.
+        Return postage is yours unless the item was faulty or we sent the wrong thing.</p>
 
-        <h2>Memberships</h2>
-        <p>Cancel any time from the customer portal linked in your Stripe receipt. Cancellation stops the
-        next renewal and you keep access until the end of the period you already paid for. If a renewal
-        charge catches you by surprise and you have not downloaded that period's drop, email within 14 days
-        and it is refunded.</p>
+        <h2>Opened cosmetics and skincare</h2>
+        <p>Hygiene rules mean we cannot resell an opened cosmetic, but a product that gave you a
+        reaction is not something you should be stuck with. Tell us what happened within {days} days
+        and it is refunded. We do not ask for a photograph of your face.</p>
 
-        <h2>Apparel and prints</h2>
-        <p>Apparel and wall prints are made to order, so they are not stocked and cannot be resold. They are
-        replaced or refunded free of charge if they arrive damaged, misprinted, or materially different from
-        what was ordered — send a photo within 30 days of delivery. Change-of-mind returns on made-to-order
-        items are not accepted, so please check the size guide before ordering.</p>
+        <h2>Faulty, damaged or wrong</h2>
+        <p>Replaced or refunded in full, including postage both ways, however long it has been —
+        a clasp that fails or a pump that never worked is not a thirty-day problem. A photo by email
+        is enough; you do not need to send it back before we act.</p>
+
+        <h2>What cannot come back</h2>
+        <p>Pierced jewelry that has been worn, and anything returned without contacting us first,
+        because unannounced parcels get lost in the post and we cannot refund what we cannot find.</p>
 
         <h2>How to claim</h2>
-        <p>Email {email} with your order reference and what went wrong. Approved refunds are issued to the
-        original payment method through Stripe and usually appear within 5–10 business days.</p>
+        <p>Email {email} with your order number and what went wrong. Approved refunds go back to the
+        original payment method and usually appear within 5–10 working days, depending on your bank
+        rather than on us.</p>
         """,
     ),
     "shipping": (
         "Delivery & Shipping",
-        "Delivery times for digital downloads and made-to-order apparel and prints.",
+        "Dispatch times, shipping costs and delivery estimates.",
         """
-        <h2>Digital delivery</h2>
-        <p>Orders placed before 2pm ship the same working day, otherwise the next one. Free US shipping
-        over $35; under that it is a flat $4.95, shown before you pay. Tracking is emailed on dispatch.</p>
+        <h2>Dispatch</h2>
+        <p>Orders placed before 2pm on a working day go out the same day. Anything after that, or at
+        a weekend, goes out the next working day. You get a tracking number by email when it does.</p>
 
-        <h2>Memberships</h2>
-        <p>Access starts immediately. Refreshes and new packs are announced by email as they ship.</p>
+        <h2>What it costs</h2>
+        <p>Free within the United States on orders over $35. Under that it is a flat $4.95. The cost
+        is shown in the bag before you pay, never added afterwards.</p>
 
-        <h2>Physical items</h2>
-        <p>Apparel and prints are produced by a print-on-demand partner after you order. Production usually
-        takes 2–5 business days, then transit time depends on destination: typically 3–7 business days
-        within the United States and 7–20 business days internationally. Tracking is emailed on dispatch.</p>
+        <h2>How long it takes</h2>
+        <p>Typically 3–7 working days within the United States once dispatched, and 7–20 working days
+        internationally. Those are the carrier's estimates, not a guarantee — weather and customs do
+        what they want.</p>
 
         <h2>Customs and duties</h2>
-        <p>International orders may attract import duties or taxes set by the destination country. Those
-        charges are the customer's responsibility and are not collected at checkout.</p>
+        <p>International orders may attract import duties or taxes set by the destination country.
+        Those are the customer's responsibility and are not collected at checkout, so check your own
+        country's threshold before ordering.</p>
 
         <h2>Wrong address</h2>
-        <p>Email {email} straight away if you mistyped an address. Before production starts it can be fixed
-        free; after dispatch a replacement has to be reordered.</p>
+        <p>Email {email} straight away if you mistyped an address. Before dispatch it costs nothing
+        to fix. After dispatch the parcel has to come back to us before we can resend it.</p>
+
+        <h2>Lost or damaged</h2>
+        <p>If tracking stalls for more than seven working days, or a parcel arrives damaged, email
+        {email} with the order number and we will replace it or refund it. You do not have to fight
+        the carrier on our behalf.</p>
         """,
     ),
     "privacy": (
@@ -1146,20 +1162,21 @@ POLICIES = {
         <p>{legal}. Contact: {email}.</p>
 
         <h2>What is collected</h2>
-        <p>If you buy something, Stripe collects the name, email, payment details and billing address needed
-        to take the payment; this store receives only the order details and your email, never your card
-        number. If you join the email list, your email address is stored so drops can be sent to you. If you
-        order a physical item, your shipping address is passed to the print partner solely to fulfil that
-        order.</p>
+        <p>If you buy something, the payment provider collects the name, email, payment details and
+        billing address needed to take the payment; this store receives only the order details and your
+        email, never your card number. If you join the email list, your address is stored so we can send
+        you drops. Your shipping address is used to get the parcel to you and is given to the carrier
+        for that delivery, and to nobody else.</p>
 
         <h2>What is not done</h2>
         <p>Your data is never sold, rented or traded. There are no advertising trackers, no ad-network
         pixels and no third-party profiling scripts on these pages.</p>
 
         <h2>Processors</h2>
-        <p>Payments are processed by Stripe under its own privacy policy. Static pages are hosted by GitHub
-        Pages, whose servers log standard request data such as IP address. Physical orders are fulfilled by
-        a print partner who receives only the shipping details for that order.</p>
+        <p>Payments are processed by whichever provider you pick at checkout — Stripe, PayPal or Cash
+        App — each under its own privacy policy, and each receiving only what it needs to take the
+        payment. These pages are hosted by GitHub Pages, whose servers log standard request data such as
+        IP address. Carriers receive the name and address on the parcel and nothing more.</p>
 
         <h2>Your rights</h2>
         <p>You can ask what is held about you, ask for it to be corrected, or ask for it to be deleted, at
@@ -1186,12 +1203,13 @@ POLICIES = {
         page — read them against your own allergies and sensitivities before buying, because we
         cannot know them.</p>
 
-        <h2>No guarantee of results</h2>
-        <p>Everything sold here is compiled reference data and analysis tooling. It is not financial,
-        investment, legal, medical or policy advice, and no decision you make from it is guaranteed to
-        work out. Figures are supplied for analysis, not as a statement of fact about the world, and
-        upstream sources revise their own numbers regularly. Check anything consequential against the
-        primary source before you rely on it.</p>
+        <h2>What we do and do not claim</h2>
+        <p>Cosmetics and wellness items sold here are cosmetic products, not medicines. Nothing on this
+        site is medical advice, and nothing is offered as a treatment, cure or prevention for any
+        condition. Skin is individual: a product that suits most people may not suit you. Patch test
+        anything new, read the ingredient list, and stop using something that irritates you.</p>
+        <p>If you are pregnant, breastfeeding, on prescription skincare, or managing a skin condition,
+        speak to a professional before adding an active product to your routine.</p>
 
         <h2>Accuracy</h2>
         <p>Data is compiled carefully from public sources and checked, but it is provided "as is" without
