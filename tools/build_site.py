@@ -517,7 +517,7 @@ def checkout_block(product: dict, *, block: bool = True, note: bool = True) -> s
     )
     return (
         f'<a class="{cls}" href="#get-free-report" data-product="{e(product["slug"])}">'
-        f"Join the launch list</a>{fineprint}"
+        f"Notify me</a>{fineprint}"
     )
 
 
@@ -579,10 +579,10 @@ def trust_row() -> str:
     days = CONV.get("show_money_back_days", 7)
     return f"""
       <div class="trust">
-        <div><strong>Instant delivery</strong><span>Digital products download the moment payment clears.</span></div>
-        <div><strong>{days}-day guarantee</strong><span>If a digital product is not what was described, email for a refund.</span></div>
-        <div><strong>Secure checkout</strong><span>Card details go straight to Stripe. This site never sees them.</span></div>
-        <div><strong>Openly licensed</strong><span>Public-domain sources, compiled and documented — provenance named for every field.</span></div>
+        <div><strong>Free over $35</strong><span>Free US shipping over $35. Flat $4.95 under.</span></div>
+        <div><strong>Ships in 1–2 days</strong><span>Ordered before 2pm, it goes out the same working day.</span></div>
+        <div><strong>{days}-day returns</strong><span>Unopened items back within {days} days. Faulty is replaced, always.</span></div>
+        <div><strong>Secure checkout</strong><span>Card details go to the payment provider. This site never sees them.</span></div>
       </div>
 """
 
@@ -782,7 +782,7 @@ def build_storefront() -> None:
         for f in STORE_FAQ
     )
 
-    title = f"{STORE['name']} — Analysis-Ready Public Data"
+    title = f"{STORE['name']} — {STORE['tagline']}"
     desc = (
         f"Shop {SHORT}: beauty, skincare, jewelry, wellness, home and kitchen edits in the "
         "$14-34 range. Free shipping over $35, 30-day returns, ships in 1-2 days."
@@ -813,7 +813,7 @@ def build_storefront() -> None:
           <p style="margin-bottom:1rem"><span class="price">{e(money(hero['price']))}<span class="suffix">{e(price_suffix(hero))}</span></span></p>
           <span style="display:inline-flex;flex-wrap:wrap;gap:.6rem">
             {checkout_block(hero, block=False, note=False)}
-            <a class="btn secondary" href="{url(SR + hero['slug'] + '/')}">What's inside</a>
+            <a class="btn secondary" href="{url(SR + hero['slug'] + '/')}">See details</a>
           </span>
         </div>
         <img class="hero-art" src="{url(hero.get('image') or SR + 'assets/' + hero['slug'] + '.svg')}" alt="{e(hero['name'])}" width="1200" height="630" />
@@ -1015,7 +1015,7 @@ def build_product(product: dict) -> None:
           <p class="delivery">{e(product['delivery'])}</p>
           {variants}
           {checkout_block(product)}
-          <p class="fineprint">Secure checkout by Stripe · {e(str(CONV.get('show_money_back_days', 7)))}-day guarantee on digital products</p>
+          <p class="fineprint">Secure checkout · {e(str(CONV.get('show_money_back_days', 7)))}-day returns · Ships in 1–2 days</p>
         </aside>
       </div>
 
@@ -1056,7 +1056,7 @@ def build_thank_you() -> None:
 
         <h2>What happens next</h2>
         <ul class="feature-list">
-          <li><strong>Digital products</strong> — delivery email arrives within a couple of minutes.</li>
+          <li><strong>Your order</strong> — a confirmation email is on its way, with tracking to follow when it ships.</li>
           <li><strong>Subscriptions</strong> — skip, pause or cancel any time from the link in your confirmation email.</li>
           <li><strong>Merch</strong> — printed on order, usually shipped within 2–5 business days, with tracking emailed on dispatch.</li>
         </ul>
@@ -1091,7 +1091,7 @@ POLICIES = {
         "Refund Policy",
         "How refunds work on digital downloads, memberships and made-to-order apparel.",
         """
-        <h2>Digital products</h2>
+        <h2>Returns</h2>
         <p>Unopened items can be returned within {days} days of delivery for a full refund. Opened
         cosmetics can be returned within the same window if they caused a reaction — tell us what
         happened and we will refund it, no photograph of your face required.</p>
@@ -1179,12 +1179,12 @@ POLICIES = {
         <p>Buying from this store means you accept these terms. The seller is {legal}, contactable at
         {email}.</p>
 
-        <h2>Licence for digital products</h2>
-        <p>Digital products are licensed, not sold. You get a personal, non-exclusive, non-transferable
-        licence to use the files for your own analysis, including internal use within a business you own.
-        You may not resell, redistribute, republish, sublicense or bundle the files or the data in them into
-        a product offered to others without written permission. Reasonable citation of findings with a
-        credit and a link back is welcome.</p>
+        <h2>The goods</h2>
+        <p>Everything sold here is a physical item, shipped to you. Product photographs and
+        descriptions are as accurate as we can make them, but colours vary between screens and
+        natural materials vary between pieces. Ingredient and material lists are on each product
+        page — read them against your own allergies and sensitivities before buying, because we
+        cannot know them.</p>
 
         <h2>No guarantee of results</h2>
         <p>Everything sold here is compiled reference data and analysis tooling. It is not financial,

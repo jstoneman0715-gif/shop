@@ -24,6 +24,14 @@
       "path": "#beauty"
     },
     {
+      "label": "Skincare",
+      "path": "#skincare"
+    },
+    {
+      "label": "Hair",
+      "path": "#hair"
+    },
+    {
       "label": "Jewelry",
       "path": "#jewelry"
     },
@@ -32,8 +40,32 @@
       "path": "#wellness"
     },
     {
+      "label": "Fitness",
+      "path": "#fitness"
+    },
+    {
       "label": "Home",
       "path": "#home"
+    },
+    {
+      "label": "Kitchen",
+      "path": "#kitchen"
+    },
+    {
+      "label": "Pet",
+      "path": "#pet"
+    },
+    {
+      "label": "Tech Accessories",
+      "path": "#tech"
+    },
+    {
+      "label": "Bags & Carry",
+      "path": "#bags"
+    },
+    {
+      "label": "Bundles",
+      "path": "#bundles"
     }
   ],
   "brand": {
