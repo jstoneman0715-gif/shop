@@ -129,3 +129,51 @@ for Google. Bing, Yandex and Seznam are notified automatically after each build.
 - [ ] Buy a domain and switch `base_url`
 - [ ] Verify in Search Console, submit the sitemap
 - [ ] Place a $1 test order through every payment method you enabled
+
+---
+
+## Sourcing and product photography
+
+`data/suppliers.json` holds researched supplier candidates matched to every
+category in the shop, and `tools/sourcing_report.py` prints the gap between what
+the site advertises and what can actually be shipped.
+
+```bash
+python3 tools/sourcing_report.py           # what is sourced, what is a guess
+python3 tools/check_images.py              # which product images actually load
+python3 tools/check_images.py --download   # host the photos in this repo
+```
+
+### Two things are currently placeholders
+
+**Costs.** `unit_cost` is an estimate on every product, so every margin figure
+the build prints is an estimate too. Replace it with a real landed cost from a
+supplier quote and the numbers become real.
+
+**Photographs.** Every product shows a stock image of something similar, not the
+item a customer would receive. That is fine while building and a refund request
+the moment somebody pays. Supplier photography is the fix, because it shows the
+actual item.
+
+### Order to do it in
+
+1. Open accounts with **JB Jewelry BLVD** (gold-filled jewelry, no MOQ, ships
+   Florida) and one of **Blanka** or **SelfNamed** (beauty and skincare, no MOQ).
+   Between them they cover the highest-margin half of the catalogue.
+2. For everything else — home, kitchen, pet, tech, bags — **CJdropshipping** has
+   US warehouses, which is the only way the 1–2 day dispatch promise holds.
+3. For each product, fill in `sourcing.supplier`, `sourcing.supplier_sku` and
+   `sourcing.landed_cost`, and set `unit_cost` to the real number.
+4. Get image rights **in writing** when you open each account. Supplier images
+   may be used only in connection with selling that supplier's products and only
+   within that supplier's terms — using photography without the rights carries US
+   statutory damages from $750 to $150,000 per work.
+5. Set `sourcing.image_source` to `supplier` and record the licence in
+   `sourcing.image_credit`, then run the **Localise product photos** workflow so
+   the images are served from this repo.
+6. **Order one of everything to yourself first.** A description written from a
+   supplier listing is a guess until you have held the item.
+
+CI runs `sourcing_report.py --strict`, which fails the build if any product has a
+live checkout URL but no supplier — that combination means a stranger can pay for
+something nobody can ship.

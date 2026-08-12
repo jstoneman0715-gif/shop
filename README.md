@@ -25,6 +25,8 @@ edited by hand.
 ## Commands
 
 ```bash
+python3 tools/sourcing_report.py             # what is sourced vs still a guess
+python3 tools/check_images.py                # which product images actually load
 python3 tools/build_site.py                  # regenerate the multi-page site
 python3 tools/build_onepage.py               # regenerate the single-file storefront
 python3 tools/check_site.py                  # links, JSON-LD, SEO tags, SVG validity

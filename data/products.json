@@ -109,7 +109,19 @@
         7,
         8
       ],
-      "image": "https://images.unsplash.com/photo-1521223344201-d169129f7b7d?w=1200&h=630&fit=crop&q=80&auto=format"
+      "image": "https://images.unsplash.com/photo-1521223344201-d169129f7b7d?w=1200&h=630&fit=crop&q=80&auto=format",
+      "sourcing": {
+        "supplier": "",
+        "supplier_sku": "",
+        "landed_cost": null,
+        "candidates": [
+          "selfnamed",
+          "blanka",
+          "yours-private-label"
+        ],
+        "image_source": "stock-placeholder",
+        "image_credit": ""
+      }
     },
     {
       "slug": "glass-skin-serum",
@@ -149,7 +161,19 @@
         9,
         10
       ],
-      "image": "https://images.unsplash.com/photo-1573575155376-b5010099301b?w=1200&h=630&fit=crop&q=80&auto=format"
+      "image": "https://images.unsplash.com/photo-1573575155376-b5010099301b?w=1200&h=630&fit=crop&q=80&auto=format",
+      "sourcing": {
+        "supplier": "",
+        "supplier_sku": "",
+        "landed_cost": null,
+        "candidates": [
+          "selfnamed",
+          "blanka",
+          "yours-private-label"
+        ],
+        "image_source": "stock-placeholder",
+        "image_credit": ""
+      }
     },
     {
       "slug": "everyday-tote",
@@ -190,7 +214,18 @@
         11,
         12
       ],
-      "image": "https://images.unsplash.com/photo-1535981444082-2a5dc0548ef3?w=1200&h=630&fit=crop&q=80&auto=format"
+      "image": "https://images.unsplash.com/photo-1535981444082-2a5dc0548ef3?w=1200&h=630&fit=crop&q=80&auto=format",
+      "sourcing": {
+        "supplier": "",
+        "supplier_sku": "",
+        "landed_cost": null,
+        "candidates": [
+          "spocket",
+          "cjdropshipping"
+        ],
+        "image_source": "stock-placeholder",
+        "image_credit": ""
+      }
     },
     {
       "slug": "fridge-organiser-set",
@@ -230,7 +265,18 @@
         8,
         9
       ],
-      "image": "https://images.unsplash.com/photo-1783094270149-8db5cdb15744?w=1200&h=630&fit=crop&q=80&auto=format"
+      "image": "https://images.unsplash.com/photo-1783094270149-8db5cdb15744?w=1200&h=630&fit=crop&q=80&auto=format",
+      "sourcing": {
+        "supplier": "",
+        "supplier_sku": "",
+        "landed_cost": null,
+        "candidates": [
+          "cjdropshipping",
+          "spocket"
+        ],
+        "image_source": "stock-placeholder",
+        "image_credit": ""
+      }
     },
     {
       "slug": "recovery-roller",
@@ -271,7 +317,18 @@
         7,
         8
       ],
-      "image": "https://images.unsplash.com/photo-1578747763484-51b21a33e4fa?w=1200&h=630&fit=crop&q=80&auto=format"
+      "image": "https://images.unsplash.com/photo-1578747763484-51b21a33e4fa?w=1200&h=630&fit=crop&q=80&auto=format",
+      "sourcing": {
+        "supplier": "",
+        "supplier_sku": "",
+        "landed_cost": null,
+        "candidates": [
+          "cjdropshipping",
+          "spocket"
+        ],
+        "image_source": "stock-placeholder",
+        "image_credit": ""
+      }
     },
     {
       "slug": "braided-cable-3pack",
@@ -310,7 +367,17 @@
         12,
         8
       ],
-      "image": "https://images.unsplash.com/photo-1572721546624-05bf65ad7679?w=1200&h=630&fit=crop&q=80&auto=format"
+      "image": "https://images.unsplash.com/photo-1572721546624-05bf65ad7679?w=1200&h=630&fit=crop&q=80&auto=format",
+      "sourcing": {
+        "supplier": "",
+        "supplier_sku": "",
+        "landed_cost": null,
+        "candidates": [
+          "cjdropshipping"
+        ],
+        "image_source": "stock-placeholder",
+        "image_credit": ""
+      }
     },
     {
       "slug": "heatless-curl-set",
@@ -351,7 +418,18 @@
         11,
         12
       ],
-      "image": "https://images.unsplash.com/photo-1611590027211-b954fd027b51?w=1200&h=630&fit=crop&q=80&auto=format"
+      "image": "https://images.unsplash.com/photo-1611590027211-b954fd027b51?w=1200&h=630&fit=crop&q=80&auto=format",
+      "sourcing": {
+        "supplier": "",
+        "supplier_sku": "",
+        "landed_cost": null,
+        "candidates": [
+          "beauty-joint",
+          "cjdropshipping"
+        ],
+        "image_source": "stock-placeholder",
+        "image_credit": ""
+      }
     },
     {
       "slug": "everyday-stack-bundle",
@@ -397,7 +475,18 @@
         12,
         2
       ],
-      "image": "https://images.unsplash.com/photo-1643168186368-c42359c82573?w=1200&h=630&fit=crop&q=80&auto=format"
+      "image": "https://images.unsplash.com/photo-1643168186368-c42359c82573?w=1200&h=630&fit=crop&q=80&auto=format",
+      "sourcing": {
+        "supplier": "",
+        "supplier_sku": "",
+        "landed_cost": null,
+        "candidates": [
+          "blanka",
+          "jb-jewelry-blvd"
+        ],
+        "image_source": "stock-placeholder",
+        "image_credit": ""
+      }
     },
     {
       "slug": "resistance-band-set",
@@ -438,7 +527,17 @@
         3,
         9
       ],
-      "image": "https://images.unsplash.com/photo-1515775538093-d2d95c5ee4f5?w=1200&h=630&fit=crop&q=80&auto=format"
+      "image": "https://images.unsplash.com/photo-1515775538093-d2d95c5ee4f5?w=1200&h=630&fit=crop&q=80&auto=format",
+      "sourcing": {
+        "supplier": "",
+        "supplier_sku": "",
+        "landed_cost": null,
+        "candidates": [
+          "cjdropshipping"
+        ],
+        "image_source": "stock-placeholder",
+        "image_credit": ""
+      }
     },
     {
       "slug": "lip-glaze-trio",
@@ -478,7 +577,19 @@
         12,
         2
       ],
-      "image": "https://images.unsplash.com/photo-1631214524115-9942bf927d4a?w=1200&h=630&fit=crop&q=80&auto=format"
+      "image": "https://images.unsplash.com/photo-1631214524115-9942bf927d4a?w=1200&h=630&fit=crop&q=80&auto=format",
+      "sourcing": {
+        "supplier": "",
+        "supplier_sku": "",
+        "landed_cost": null,
+        "candidates": [
+          "blanka",
+          "yours-private-label",
+          "beauty-joint"
+        ],
+        "image_source": "stock-placeholder",
+        "image_credit": ""
+      }
     },
     {
       "slug": "glow-starter-bundle",
@@ -518,7 +629,18 @@
         12,
         2
       ],
-      "image": "https://images.unsplash.com/photo-1642005799634-5d1bc2829b03?w=1200&h=630&fit=crop&q=80&auto=format"
+      "image": "https://images.unsplash.com/photo-1642005799634-5d1bc2829b03?w=1200&h=630&fit=crop&q=80&auto=format",
+      "sourcing": {
+        "supplier": "",
+        "supplier_sku": "",
+        "landed_cost": null,
+        "candidates": [
+          "blanka",
+          "jb-jewelry-blvd"
+        ],
+        "image_source": "stock-placeholder",
+        "image_credit": ""
+      }
     },
     {
       "slug": "aroma-stone-diffuser",
@@ -559,7 +681,18 @@
         11,
         12
       ],
-      "image": "https://images.unsplash.com/photo-1732229035217-e7e42f61af4b?w=1200&h=630&fit=crop&q=80&auto=format"
+      "image": "https://images.unsplash.com/photo-1732229035217-e7e42f61af4b?w=1200&h=630&fit=crop&q=80&auto=format",
+      "sourcing": {
+        "supplier": "",
+        "supplier_sku": "",
+        "landed_cost": null,
+        "candidates": [
+          "cjdropshipping",
+          "spocket"
+        ],
+        "image_source": "stock-placeholder",
+        "image_credit": ""
+      }
     },
     {
       "slug": "stack-rings-set",
@@ -605,7 +738,18 @@
         2,
         5
       ],
-      "image": "https://images.unsplash.com/photo-1731586249471-82bb9b2f769a?w=1200&h=630&fit=crop&q=80&auto=format"
+      "image": "https://images.unsplash.com/photo-1731586249471-82bb9b2f769a?w=1200&h=630&fit=crop&q=80&auto=format",
+      "sourcing": {
+        "supplier": "",
+        "supplier_sku": "",
+        "landed_cost": null,
+        "candidates": [
+          "jb-jewelry-blvd",
+          "jewelryodm"
+        ],
+        "image_source": "stock-placeholder",
+        "image_credit": ""
+      }
     },
     {
       "slug": "herringbone-chain",
@@ -647,7 +791,18 @@
         12,
         2
       ],
-      "image": "https://images.unsplash.com/photo-1633555234296-657a18d8b81a?w=1200&h=630&fit=crop&q=80&auto=format"
+      "image": "https://images.unsplash.com/photo-1633555234296-657a18d8b81a?w=1200&h=630&fit=crop&q=80&auto=format",
+      "sourcing": {
+        "supplier": "",
+        "supplier_sku": "",
+        "landed_cost": null,
+        "candidates": [
+          "jb-jewelry-blvd",
+          "jewelryodm"
+        ],
+        "image_source": "stock-placeholder",
+        "image_credit": ""
+      }
     },
     {
       "slug": "pet-hair-remover",
@@ -688,7 +843,17 @@
         9,
         10
       ],
-      "image": "https://images.unsplash.com/photo-1610123172037-c970be4d24d7?w=1200&h=630&fit=crop&q=80&auto=format"
+      "image": "https://images.unsplash.com/photo-1610123172037-c970be4d24d7?w=1200&h=630&fit=crop&q=80&auto=format",
+      "sourcing": {
+        "supplier": "",
+        "supplier_sku": "",
+        "landed_cost": null,
+        "candidates": [
+          "cjdropshipping"
+        ],
+        "image_source": "stock-placeholder",
+        "image_credit": ""
+      }
     },
     {
       "slug": "peptide-lip-mask",
@@ -728,7 +893,19 @@
         1,
         2
       ],
-      "image": "https://images.unsplash.com/photo-1567102110161-6a69e7df77f5?w=1200&h=630&fit=crop&q=80&auto=format"
+      "image": "https://images.unsplash.com/photo-1567102110161-6a69e7df77f5?w=1200&h=630&fit=crop&q=80&auto=format",
+      "sourcing": {
+        "supplier": "",
+        "supplier_sku": "",
+        "landed_cost": null,
+        "candidates": [
+          "selfnamed",
+          "blanka",
+          "yours-private-label"
+        ],
+        "image_source": "stock-placeholder",
+        "image_credit": ""
+      }
     },
     {
       "slug": "oil-mister",
@@ -768,7 +945,18 @@
         2,
         9
       ],
-      "image": "https://images.unsplash.com/photo-1552592074-ea7a91b851b3?w=1200&h=630&fit=crop&q=80&auto=format"
+      "image": "https://images.unsplash.com/photo-1552592074-ea7a91b851b3?w=1200&h=630&fit=crop&q=80&auto=format",
+      "sourcing": {
+        "supplier": "",
+        "supplier_sku": "",
+        "landed_cost": null,
+        "candidates": [
+          "cjdropshipping",
+          "spocket"
+        ],
+        "image_source": "stock-placeholder",
+        "image_credit": ""
+      }
     },
     {
       "slug": "huggie-hoops",
@@ -807,7 +995,18 @@
         12,
         2
       ],
-      "image": "https://images.unsplash.com/photo-1777999763640-b228fe3192de?w=1200&h=630&fit=crop&q=80&auto=format"
+      "image": "https://images.unsplash.com/photo-1777999763640-b228fe3192de?w=1200&h=630&fit=crop&q=80&auto=format",
+      "sourcing": {
+        "supplier": "",
+        "supplier_sku": "",
+        "landed_cost": null,
+        "candidates": [
+          "jb-jewelry-blvd",
+          "jewelryodm"
+        ],
+        "image_source": "stock-placeholder",
+        "image_credit": ""
+      }
     },
     {
       "slug": "sunset-lamp",
@@ -848,7 +1047,18 @@
         12,
         1
       ],
-      "image": "https://images.unsplash.com/photo-1708232981795-2baec1d6687b?w=1200&h=630&fit=crop&q=80&auto=format"
+      "image": "https://images.unsplash.com/photo-1708232981795-2baec1d6687b?w=1200&h=630&fit=crop&q=80&auto=format",
+      "sourcing": {
+        "supplier": "",
+        "supplier_sku": "",
+        "landed_cost": null,
+        "candidates": [
+          "cjdropshipping",
+          "spocket"
+        ],
+        "image_source": "stock-placeholder",
+        "image_credit": ""
+      }
     },
     {
       "slug": "cloud-slippers",
@@ -894,7 +1104,18 @@
         12,
         1
       ],
-      "image": "https://images.unsplash.com/photo-1543420629-5350879dd4cd?w=1200&h=630&fit=crop&q=80&auto=format"
+      "image": "https://images.unsplash.com/photo-1543420629-5350879dd4cd?w=1200&h=630&fit=crop&q=80&auto=format",
+      "sourcing": {
+        "supplier": "",
+        "supplier_sku": "",
+        "landed_cost": null,
+        "candidates": [
+          "cjdropshipping",
+          "spocket"
+        ],
+        "image_source": "stock-placeholder",
+        "image_credit": ""
+      }
     },
     {
       "slug": "magnesium-sleep-mist",
@@ -935,7 +1156,18 @@
         11,
         12
       ],
-      "image": "https://images.unsplash.com/photo-1617537230936-bb8c9327e84f?w=1200&h=630&fit=crop&q=80&auto=format"
+      "image": "https://images.unsplash.com/photo-1617537230936-bb8c9327e84f?w=1200&h=630&fit=crop&q=80&auto=format",
+      "sourcing": {
+        "supplier": "",
+        "supplier_sku": "",
+        "landed_cost": null,
+        "candidates": [
+          "cjdropshipping",
+          "spocket"
+        ],
+        "image_source": "stock-placeholder",
+        "image_credit": ""
+      }
     },
     {
       "slug": "acupressure-mat",
@@ -976,7 +1208,18 @@
         11,
         12
       ],
-      "image": "https://images.unsplash.com/photo-1673974399127-d30fd7797a91?w=1200&h=630&fit=crop&q=80&auto=format"
+      "image": "https://images.unsplash.com/photo-1673974399127-d30fd7797a91?w=1200&h=630&fit=crop&q=80&auto=format",
+      "sourcing": {
+        "supplier": "",
+        "supplier_sku": "",
+        "landed_cost": null,
+        "candidates": [
+          "cjdropshipping",
+          "spocket"
+        ],
+        "image_source": "stock-placeholder",
+        "image_credit": ""
+      }
     },
     {
       "slug": "magsafe-stand",
@@ -1015,7 +1258,17 @@
         11,
         12
       ],
-      "image": "https://images.unsplash.com/photo-1778854096628-0266421cac9e?w=1200&h=630&fit=crop&q=80&auto=format"
+      "image": "https://images.unsplash.com/photo-1778854096628-0266421cac9e?w=1200&h=630&fit=crop&q=80&auto=format",
+      "sourcing": {
+        "supplier": "",
+        "supplier_sku": "",
+        "landed_cost": null,
+        "candidates": [
+          "cjdropshipping"
+        ],
+        "image_source": "stock-placeholder",
+        "image_credit": ""
+      }
     },
     {
       "slug": "scalp-massager",
@@ -1055,7 +1308,18 @@
         2,
         3
       ],
-      "image": "https://images.unsplash.com/photo-1767953829433-1e405b6889de?w=1200&h=630&fit=crop&q=80&auto=format"
+      "image": "https://images.unsplash.com/photo-1767953829433-1e405b6889de?w=1200&h=630&fit=crop&q=80&auto=format",
+      "sourcing": {
+        "supplier": "",
+        "supplier_sku": "",
+        "landed_cost": null,
+        "candidates": [
+          "beauty-joint",
+          "cjdropshipping"
+        ],
+        "image_source": "stock-placeholder",
+        "image_credit": ""
+      }
     },
     {
       "slug": "travel-jewelry-case",
@@ -1096,7 +1360,18 @@
         11,
         12
       ],
-      "image": "https://images.unsplash.com/photo-1708221269975-cc31682c7fc4?w=1200&h=630&fit=crop&q=80&auto=format"
+      "image": "https://images.unsplash.com/photo-1708221269975-cc31682c7fc4?w=1200&h=630&fit=crop&q=80&auto=format",
+      "sourcing": {
+        "supplier": "",
+        "supplier_sku": "",
+        "landed_cost": null,
+        "candidates": [
+          "spocket",
+          "cjdropshipping"
+        ],
+        "image_source": "stock-placeholder",
+        "image_credit": ""
+      }
     },
     {
       "slug": "slow-feeder-bowl",
@@ -1136,7 +1411,17 @@
         6,
         12
       ],
-      "image": "https://images.unsplash.com/photo-1679224106783-c21b1841412a?w=1200&h=630&fit=crop&q=80&auto=format"
+      "image": "https://images.unsplash.com/photo-1679224106783-c21b1841412a?w=1200&h=630&fit=crop&q=80&auto=format",
+      "sourcing": {
+        "supplier": "",
+        "supplier_sku": "",
+        "landed_cost": null,
+        "candidates": [
+          "cjdropshipping"
+        ],
+        "image_source": "stock-placeholder",
+        "image_credit": ""
+      }
     },
     {
       "slug": "adjustable-jump-rope",
@@ -1176,7 +1461,17 @@
         2,
         3
       ],
-      "image": "https://images.unsplash.com/photo-1516876345887-6dd74f80787a?w=1200&h=630&fit=crop&q=80&auto=format"
+      "image": "https://images.unsplash.com/photo-1516876345887-6dd74f80787a?w=1200&h=630&fit=crop&q=80&auto=format",
+      "sourcing": {
+        "supplier": "",
+        "supplier_sku": "",
+        "landed_cost": null,
+        "candidates": [
+          "cjdropshipping"
+        ],
+        "image_source": "stock-placeholder",
+        "image_credit": ""
+      }
     }
   ]
 }

@@ -52,6 +52,12 @@ jobs:
         continue-on-error: true
         run: python3 tools/check_images.py
 
+      # Strict on purpose: a product with a live checkout URL and no supplier
+      # can be paid for and not fulfilled, which is the one failure a shop
+      # cannot absorb.
+      - name: Sourcing check
+        run: python3 tools/sourcing_report.py --strict
+
       - name: Commit regenerated pages
         id: commit
         if: github.event_name != 'pull_request'
