@@ -139,6 +139,104 @@ python3 tools/check_images.py       # confirm every image loads
 CI fails the build if a product has a checkout URL and no supplier, so it is not
 possible to leave something buyable that nobody can ship.
 
+
+---
+
+## Ohio specifics
+
+Reviewed for Ohio, August 2026. Fees and forms change — confirm each at the
+source before paying anything. Not legal or tax advice.
+
+### What is different here
+
+Ohio calls the sales tax registration a **vendor's license**, and it has **no
+standalone resale certificate**. Those two facts change the order of operations,
+because suppliers ask for a resale certificate and in Ohio you cannot produce a
+valid one until the vendor's license exists.
+
+### Step A — Register the trade name (Form 534A, $39)
+
+"ALL THE RAGE" is not your legal name, so Ohio requires it to be registered as a
+trade name before you trade under it.
+
+- **Ohio Secretary of State** → Name Registration, **Form 534A**
+- **$39**, valid **five years**, renewable in the six months before it expires
+- Governed by Ohio Revised Code Chapter 1329
+
+Do this before opening the PayPal Business account, because that application
+asks for the business name and it should match what the state has on file.
+
+### Step B — OHID, then the vendor's license
+
+1. Create an **OHID** account — you cannot register online without one
+2. **Ohio Business Gateway** or Ohio TAX eServices → apply for a **regular
+   vendor's license** (Form **ST-1** if you would rather post it or take it to
+   your county auditor)
+3. Fee reported as **$25**, and as **$50 since 9 April 2025** — sources
+   disagree, so budget $50 and check the figure on the application screen
+4. You need the business name, structure (sole proprietorship) and your EIN
+
+A **regular** vendor's license is the one for a fixed place of business in an
+Ohio county, which includes running the shop from home.
+
+The $100,000 / 200-transaction economic nexus threshold you will read about is
+for **out-of-state** sellers. It does not apply to you. As an Ohio seller you
+need the licence from the first taxable sale, not after a threshold.
+
+### Step C — STEC B, for the suppliers
+
+Ohio issues no separate resale certificate. You claim resale on the
+**Sales and Use Tax Blanket Exemption Certificate, form STEC B**, which you fill
+in yourself and hand to each supplier.
+
+- Download **STEC B** from tax.ohio.gov
+- Reason for exemption: **resale**
+- It asks for your **vendor's license number** — hence Step B first
+- No expiry, but it is only valid while your vendor's license is active
+- Use the blanket version, not STEC U, since you will buy repeatedly
+
+Send a completed STEC B to JB Jewelry BLVD and to Blanka or SelfNamed when you
+open those accounts. It is what stops them charging you sales tax on stock you
+are going to resell.
+
+### Revised Ohio order
+
+1. **EIN** — irs.gov, free, 10 minutes
+2. **Trade name** — Ohio SoS Form 534A, $39
+3. **PayPal Business** + paypal.me handle → into config → **shop takes money**
+4. **Cash App Business** → $Cashtag into config
+5. **OHID** → **Ohio Business Gateway** → **vendor's license** (~$25–50)
+6. **STEC B** filled in, ready to send to suppliers
+7. **Stripe** → payment links → cards and wallets
+8. **JB Jewelry BLVD** + **Blanka or SelfNamed**, STEC B attached
+9. **Order one of everything to yourself**
+
+Steps 1–4 are an afternoon and end with the shop able to take money. Steps 5–6
+are what let a supplier open a wholesale account for you.
+
+### The sales tax gap in the shop as it stands
+
+Worth saying plainly: **the checkout does not calculate or collect sales tax.**
+PayPal.me and Cash App just move an amount — they do not know what was bought or
+where it is going. So on an Ohio order today, the tax comes out of your margin
+and you still owe it.
+
+Three ways out, cheapest first:
+
+- **Absorb it at first.** At a handful of orders a month, treat the listed price
+  as tax-inclusive for Ohio buyers and remit from the proceeds. Simplest, and it
+  quietly costs you a few points of margin on in-state sales only.
+- **Turn on tax in Stripe.** Stripe Tax calculates and collects per destination
+  at checkout. This is the real fix and the reason to prioritise Stripe over
+  staying on PayPal links.
+- **Register, file, remit** on the schedule the vendor's license assigns you,
+  whichever of the above you pick. The licence is what creates the filing
+  obligation, not the volume.
+
+Ohio sourcing rules decide which rate applies to an in-state order. Confirm the
+current rule with the Department of Taxation rather than guessing — the rate
+differs by county.
+
 ---
 
 ## The order, one line each

@@ -127,5 +127,14 @@
     "hero_product": "lip-glaze-trio",
     "order_bump": "huggie-hoops",
     "free_lead_magnet": null
+  },
+  "tax": {
+    "_comment": "The checkout does not calculate sales tax: PayPal.me and Cash App move an amount and know nothing about what was bought or where it is going. Until Stripe Tax is switched on, tax on in-state orders comes out of margin and is still owed. See ACCOUNTS.md.",
+    "collects_at_checkout": false,
+    "home_state": "OH",
+    "registration": "Ohio vendor's license (Form ST-1 via Ohio Business Gateway)",
+    "resale_certificate": "Ohio STEC B — blanket exemption, requires an active vendor's license",
+    "prices_include_tax_for_home_state": true,
+    "fix": "Enable Stripe Tax and route checkout through Stripe to calculate and collect per destination."
   }
 }
