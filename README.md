@@ -1,4 +1,4 @@
-# SOFTLAUNCH
+# All The Rage
 
 A mobile-first shop for beauty, jewelry, wellness and home goods. Static HTML, no
 storefront platform, no revenue share — payments go straight to your own PayPal,

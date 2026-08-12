@@ -1,4 +1,4 @@
-# SOFTLAUNCH — setup and operations
+# All The Rage — setup and operations
 
 Everything that can be automated already is. What is left needs accounts only you
 can open. In order of revenue impact.

@@ -1,5 +1,5 @@
 /**
- * SOFTLAUNCH — automated digital fulfilment.
+ * All The Rage — automated digital fulfilment.
  *
  * A single Cloudflare Worker that closes the loop between "customer paid" and
  * "customer has the file", with nothing for you to do by hand:
@@ -31,7 +31,7 @@ export default {
       return handleDownload(url, env);
     }
     if (url.pathname === "/health") {
-      return json({ ok: true, service: "softlaunch-fulfilment" });
+      return json({ ok: true, service: "shop-fulfilment" });
     }
     return new Response("Not found", { status: 404 });
   },
@@ -174,7 +174,7 @@ async function sendEmail(to, links, session, env) {
 
   const html = `
     <div style="font-family:-apple-system,Segoe UI,Roboto,sans-serif;color:#111;line-height:1.6">
-      <h2 style="color:#ff6b35;margin-bottom:.2rem">SOFTLAUNCH</h2>
+      <h2 style="color:#ff6b35;margin-bottom:.2rem">All The Rage</h2>
       <p>Thanks for your order — here is everything you bought.</p>
       <ul>${list}</ul>
       <p style="font-size:.9em;color:#555">
@@ -193,7 +193,7 @@ async function sendEmail(to, links, session, env) {
     body: JSON.stringify({
       from: env.FROM_EMAIL,
       to: [to],
-      subject: "Your SOFTLAUNCH download links",
+      subject: "Your All The Rage download links",
       html,
     }),
   });

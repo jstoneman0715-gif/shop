@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Post-build checks for the SOFTLAUNCH storefront.
+"""Post-build checks for the storefront.
 
 Runs in CI after tools/build_site.py so a broken page can never reach the live
 site: every JSON-LD block must parse, every internal link must resolve to a file

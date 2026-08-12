@@ -1,5 +1,5 @@
 {
-  "_comment": "SOFTLAUNCH catalogue — deliberately broad rather than one niche, so the shop has something to sell in every month and every basket. Prices sit in the $14-34 impulse band that converts best, with two bundles above it to lift order value. Each product carries demand_weight and peak_months, which tools/update_catalogue.py uses to re-rank the shop automatically.",
+  "_comment": "Catalogue — deliberately broad rather than one niche, so the shop has something to sell in every month and every basket. Prices sit in the $14-34 impulse band that converts best, with two bundles above it to lift order value. Each product carries demand_weight and peak_months, which tools/update_catalogue.py uses to re-rank the shop automatically.",
   "_mechanics": {
     "free_shipping_threshold": 35,
     "why": "Set above the natural basket so most shoppers add one more item — the highest-ROI order-value lever a small store has.",

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""SOFTLAUNCH — static storefront generator.
+"""Static storefront generator. The shop's name lives in data/config.json.
 
 Reads data/config.json + data/products.json and writes every page of the site
 as plain static HTML: storefront, one page per product, policy pages, the

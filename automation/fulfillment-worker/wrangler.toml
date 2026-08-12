@@ -1,4 +1,4 @@
-name = "softlaunch-fulfilment"
+name = "shop-fulfilment"
 main = "worker.js"
 compatibility_date = "2026-01-01"
 
@@ -6,11 +6,11 @@ compatibility_date = "2026-01-01"
 #   global-macro-pack.zip, country-reference-pack.zip, climate-baseline-pack.zip, ...
 [[r2_buckets]]
 binding = "PRODUCTS"
-bucket_name = "softlaunch-products"
+bucket_name = "shop-products"
 
 [vars]
-PUBLIC_WORKER_URL = "https://softlaunch-fulfilment.YOUR-SUBDOMAIN.workers.dev"
-FROM_EMAIL = "SOFTLAUNCH <orders@your-domain.com>"
+PUBLIC_WORKER_URL = "https://shop-fulfilment.YOUR-SUBDOMAIN.workers.dev"
+FROM_EMAIL = "All The Rage <orders@your-domain.com>"
 LINK_TTL_SECONDS = "1209600"
 # Optional fallback map for Stripe prices created without metadata.slug:
 # SLUG_BY_PRICE = '{"price_123":"global-macro-pack"}'

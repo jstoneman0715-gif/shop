@@ -44,6 +44,14 @@ SUB_PCT = int(MECH.get("subscribe_discount_pct") or 0)
 GUARANTEE = int(CFG["conversion"].get("show_money_back_days", 30))
 
 
+def brandmark() -> str:
+    """Store name with its last word accented — derived, never hardcoded."""
+    parts = STORE["name"].split()
+    if len(parts) == 1:
+        return e(parts[0])
+    return f'{e(" ".join(parts[:-1]))} <em>{e(parts[-1])}</em>'
+
+
 def money(value: float) -> str:
     return f"${int(value)}" if float(value).is_integer() else f"${value:,.2f}"
 
@@ -87,6 +95,24 @@ def art(product: dict, index: int) -> str:
     )
 
 
+def media(product: dict, index: int) -> str:
+    """Photo when the catalogue has one, generated plate when it does not.
+
+    The plate stays in the DOM underneath as a real fallback: this page is also
+    published to hosts whose content policy blocks off-site images, and a broken
+    image icon on every card is worse than an abstract plate.
+    """
+    plate = art(product, index)
+    photo = (product.get("image") or "").strip()
+    if not photo:
+        return plate
+    return (
+        f'{plate}<img class="photo" src="{e(photo)}" alt="{e(product["name"])}" '
+        f'loading="lazy" decoding="async" '
+        f'onerror="this.remove()" />'
+    )
+
+
 def card(product: dict, index: int) -> str:
     pct = discount_pct(product)
     off = f'<span class="off">−{pct}%</span>' if pct else ""
@@ -116,7 +142,7 @@ def card(product: dict, index: int) -> str:
     feats = "".join(f"<li>{e(f)}</li>" for f in (product.get("features") or [])[:3])
 
     return f"""      <article class="card" id="p-{e(product['slug'])}" data-cat="{e(product['category'])}">
-        <div class="media">{art(product, index)}{off}{badge}</div>
+        <div class="media">{media(product, index)}{off}{badge}</div>
         <div class="body">
           <h3>{e(product['name'])}</h3>
           <p class="blurb">{e(product['short'])}</p>
@@ -231,6 +257,7 @@ def build() -> str:
   .bar{{display:flex;align-items:center;gap:10px;padding:10px 0}}
   .brand{{font-weight:900;letter-spacing:-.04em;font-size:20px}}
   .brand em{{font-style:normal;color:var(--accent)}}
+  .brand{{white-space:nowrap}}
   .grow{{flex:1}}
   .iconbtn{{background:var(--raised);border:1px solid var(--line);color:var(--ink);
     border-radius:999px;padding:0 15px;min-height:44px;font-size:14px;font-weight:600}}
@@ -249,8 +276,9 @@ def build() -> str:
   .btn{{background:var(--accent);color:var(--on-accent);border:1px solid transparent;text-decoration:none;
     border-radius:12px;padding:13px 20px;font-weight:750;font-size:15px;display:inline-block}}
   .btn.ghost{{background:transparent;color:var(--ink);border-color:var(--line)}}
-  .heroart{{border-radius:18px;overflow:hidden;box-shadow:var(--shadow);aspect-ratio:5/4}}
+  .heroart{{position:relative;border-radius:18px;overflow:hidden;box-shadow:var(--shadow);aspect-ratio:5/4}}
   .heroart svg{{width:100%;height:100%;display:block}}
+  .heroart .photo{{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}}
   .perks{{display:flex;gap:14px;flex-wrap:wrap;color:var(--soft);font-size:13px;margin-top:14px}}
   .perks span::before{{content:"✓";color:var(--good);font-weight:800;margin-right:5px}}
 
@@ -264,6 +292,7 @@ def build() -> str:
     display:flex;flex-direction:column;box-shadow:var(--shadow)}}
   .media{{position:relative;aspect-ratio:4/3;background:var(--raised)}}
   .plate{{width:100%;height:100%;display:block}}
+  .media .photo{{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}}
   .off{{position:absolute;left:8px;top:8px;background:var(--accent);color:var(--on-accent);
     font-size:12px;font-weight:800;padding:3px 8px;border-radius:8px}}
   .badge{{position:absolute;right:8px;top:8px;background:rgba(0,0,0,.62);color:#fff;
@@ -354,7 +383,7 @@ def build() -> str:
 <header class="top" id="top">
   <div class="wrap">
     <div class="bar">
-      <span class="brand">SOFT<em>LAUNCH</em></span>
+      <span class="brand">{brandmark()}</span>
       <span class="grow"></span>
       <button class="iconbtn" id="share-store">Share</button>
       <button class="iconbtn" id="open-cart">Cart <span id="cart-count">0</span></button>
@@ -378,7 +407,7 @@ def build() -> str:
         <span>Ships in 1–2 days</span>
       </div>
     </div>
-    <div class="heroart">{art(hero, 99)}</div>
+    <div class="heroart">{media(hero, 99)}</div>
   </div>
 
 {sections()}
@@ -430,7 +459,7 @@ def build() -> str:
   var STORE = {json.dumps(STORE["name"])};
   var FREE_OVER = {FREE_OVER};
   var SUB_PCT = {SUB_PCT};
-  var KEY = "softlaunch.bag.v1";
+  var KEY = "shop.bag.v1";
 
   var bag = read();
   function read() {{
