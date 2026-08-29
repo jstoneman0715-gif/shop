@@ -12,10 +12,34 @@
   },
   "suppliers": [
     {
+      "id": "faire",
+      "name": "Faire",
+      "url": "https://www.faire.com",
+      "covers": [
+        "home",
+        "kitchen",
+        "pet",
+        "fitness",
+        "wellness",
+        "bags",
+        "beauty"
+      ],
+      "model": "wholesale marketplace of independent brands",
+      "moq": "$100-200 per brand, many brands $100-500",
+      "ships_from": "mostly US independent brands",
+      "why": "The standout is net-60 terms for retailers: you receive the stock and pay 60 days later, so a first order can be sold before it is paid for. That is the single biggest cash-flow advantage available to a shop with no capital. Covers home, kitchen, pet and fitness, which are exactly the categories with the fewest options elsewhere. Real brands with real product photography, not generic factory listings.",
+      "images": "Brand-owned photography, usually provided to stockists. Confirm per brand.",
+      "note": "The 25% new / 15% repeat commission quoted online is what Faire charges BRANDS selling on it. As a buyer you pay the wholesale price.",
+      "confirmed": false
+    },
+    {
       "id": "blanka",
       "name": "Blanka",
       "url": "https://blanka.com",
-      "covers": ["beauty", "skincare"],
+      "covers": [
+        "beauty",
+        "skincare"
+      ],
       "model": "private label / white label",
       "moq": "none",
       "ships_from": "US and Canada",
@@ -27,7 +51,10 @@
       "id": "selfnamed",
       "name": "SelfNamed",
       "url": "https://selfnamed.com",
-      "covers": ["skincare", "beauty"],
+      "covers": [
+        "skincare",
+        "beauty"
+      ],
       "model": "private label, ready-made formulations",
       "moq": "none",
       "ships_from": "EU and a US warehouse",
@@ -39,7 +66,10 @@
       "id": "yours-private-label",
       "name": "YOURS Private Label",
       "url": "https://drhc-cosmetics.com",
-      "covers": ["skincare", "beauty"],
+      "covers": [
+        "skincare",
+        "beauty"
+      ],
       "model": "private label, vegan / cruelty-free lines",
       "moq": "none",
       "ships_from": "US",
@@ -51,7 +81,11 @@
       "id": "beauty-joint",
       "name": "Beauty Joint",
       "url": "https://www.beautyjoint.com",
-      "covers": ["beauty", "skincare", "hair"],
+      "covers": [
+        "beauty",
+        "skincare",
+        "hair"
+      ],
       "model": "wholesale of existing brands, incl. K-beauty",
       "moq": "low",
       "ships_from": "Los Angeles, US",
@@ -63,7 +97,9 @@
       "id": "jb-jewelry-blvd",
       "name": "JB Jewelry BLVD",
       "url": "https://www.jb-jewelry.com",
-      "covers": ["jewelry"],
+      "covers": [
+        "jewelry"
+      ],
       "model": "wholesale + dropship",
       "moq": "none",
       "ships_from": "Fort Lauderdale, FL, US",
@@ -75,7 +111,9 @@
       "id": "jewelryodm",
       "name": "JewelryODM",
       "url": "https://www.jewelryodm.com",
-      "covers": ["jewelry"],
+      "covers": [
+        "jewelry"
+      ],
       "model": "manufacture / ODM + dropship",
       "moq": "none",
       "ships_from": "manufacturer direct",
@@ -87,7 +125,15 @@
       "id": "cjdropshipping",
       "name": "CJdropshipping",
       "url": "https://cjdropshipping.com",
-      "covers": ["home", "kitchen", "pet", "tech", "bags", "wellness", "fitness"],
+      "covers": [
+        "home",
+        "kitchen",
+        "pet",
+        "tech",
+        "bags",
+        "wellness",
+        "fitness"
+      ],
       "model": "dropship, global warehouses including North America",
       "moq": "none",
       "ships_from": "US, EU and Asia warehouses",
@@ -99,28 +145,91 @@
       "id": "spocket",
       "name": "Spocket",
       "url": "https://www.spocket.co",
-      "covers": ["home", "kitchen", "bags", "wellness", "beauty"],
+      "covers": [
+        "home",
+        "kitchen",
+        "bags",
+        "wellness",
+        "beauty"
+      ],
       "model": "marketplace of vetted US/EU suppliers",
       "moq": "none",
       "ships_from": "US and EU suppliers",
       "why": "Vetted US and EU suppliers mean shorter shipping than Asia-direct, which matters most on the items people expect quickly.",
       "images": "Supplier imagery supplied through the platform; rights are per supplier.",
       "confirmed": false
+    },
+    {
+      "id": "tundra",
+      "name": "Tundra",
+      "url": "https://www.tundra.com",
+      "covers": [
+        "home",
+        "kitchen",
+        "bags",
+        "wellness"
+      ],
+      "model": "wholesale marketplace",
+      "moq": "varies by brand",
+      "ships_from": "US and international brands",
+      "why": "Secondary to Faire with a smaller network. Worth a look only if a specific brand is not on Faire.",
+      "images": "Per brand.",
+      "confirmed": false
     }
   ],
   "category_map": {
-    "beauty": ["blanka", "yours-private-label", "beauty-joint"],
-    "skincare": ["selfnamed", "blanka", "yours-private-label"],
-    "hair": ["beauty-joint", "cjdropshipping"],
-    "jewelry": ["jb-jewelry-blvd", "jewelryodm"],
-    "wellness": ["cjdropshipping", "spocket"],
-    "fitness": ["cjdropshipping"],
-    "home": ["cjdropshipping", "spocket"],
-    "kitchen": ["cjdropshipping", "spocket"],
-    "pet": ["cjdropshipping"],
-    "tech": ["cjdropshipping"],
-    "bags": ["spocket", "cjdropshipping"],
-    "bundles": ["blanka", "jb-jewelry-blvd"]
+    "beauty": [
+      "blanka",
+      "yours-private-label",
+      "beauty-joint"
+    ],
+    "skincare": [
+      "selfnamed",
+      "blanka",
+      "yours-private-label"
+    ],
+    "hair": [
+      "beauty-joint",
+      "cjdropshipping"
+    ],
+    "jewelry": [
+      "jb-jewelry-blvd",
+      "jewelryodm"
+    ],
+    "wellness": [
+      "faire",
+      "cjdropshipping",
+      "spocket"
+    ],
+    "fitness": [
+      "faire",
+      "cjdropshipping"
+    ],
+    "home": [
+      "faire",
+      "cjdropshipping",
+      "spocket"
+    ],
+    "kitchen": [
+      "faire",
+      "cjdropshipping",
+      "spocket"
+    ],
+    "pet": [
+      "faire",
+      "cjdropshipping"
+    ],
+    "tech": [
+      "cjdropshipping"
+    ],
+    "bags": [
+      "spocket",
+      "cjdropshipping"
+    ],
+    "bundles": [
+      "blanka",
+      "jb-jewelry-blvd"
+    ]
   },
   "next_steps": [
     "Open accounts with JB Jewelry BLVD (jewelry) and one of Blanka or SelfNamed (beauty and skincare) first — those two cover the highest-margin half of the catalogue.",
@@ -128,5 +237,9 @@
     "Get written confirmation of image rights at account opening, then set sourcing.image_source to 'supplier' and put the licence reference in sourcing.image_credit.",
     "Run the 'Localise product photos' workflow so the photography is hosted by this repo rather than hotlinked.",
     "Order one of everything to yourself before selling any of it. Photographs and descriptions written from a supplier listing are guesses until you have held the item."
-  ]
+  ],
+  "_defunct": {
+    "abound": "Do not spend time on Abound. It was acquired by Carro in early 2024 and the wholesale marketplace no longer exists. It still appears in most 'Faire alternatives' listicles."
+  },
+  "_reviewed": "2026-08-12"
 }
