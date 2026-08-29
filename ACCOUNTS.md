@@ -237,6 +237,92 @@ Ohio sourcing rules decide which rate applies to an in-state order. Confirm the
 current rule with the Department of Taxation rather than guessing — the rate
 differs by county.
 
+
+---
+
+## Opening a supplier account, step by step
+
+There are two routes and they need completely different things. Route A needs no
+paperwork and covers most of the shop. Start there.
+
+### Route A — CJdropshipping, today, no documents (16 of 27 products)
+
+CJ is a free account with no application and no resale certificate, because you
+are not buying wholesale — you pay per order at their price. That makes it the
+only supplier you can open before the Ohio paperwork clears.
+
+Covers home, kitchen, pet, tech, bags, wellness and fitness: **16 products,
+$347 of listed value**, well over half the catalogue.
+
+1. **cjdropshipping.com** → Sign Up. Email and password. No business documents.
+2. Search for the first product — start with **Fridge Organiser Set**. Use their
+   image search if a text search is noisy.
+3. **Filter to a US warehouse.** This is not optional: the site promises dispatch
+   in 1–2 days, and a China-warehouse listing makes that promise false.
+4. On the listing, write down three things:
+   - their **product ID / SKU**
+   - the **product cost**
+   - the **shipping cost to Ohio** — cost plus shipping is your landed cost
+5. Save their **product photos**. These show the actual item, unlike the stock
+   images currently on the site.
+6. Repeat for the other 15. Budget an hour.
+
+**Ask CJ support one question in writing before you list anything:**
+
+> "Can I use your product images on my own store, and under what terms?"
+
+Their policy allows supplier images in connection with selling that supplier's
+products, subject to the individual supplier's terms — get it confirmed for the
+specific listings you use, and save the reply.
+
+### Route B — wholesale, needs the Ohio paperwork (9 products)
+
+JB Jewelry BLVD (3 jewelry products) and Blanka or SelfNamed (6 beauty and hair)
+are real wholesale accounts. They sell at wholesale prices, which is why they
+ask you to prove you are a business.
+
+**Have these four things ready before you apply — an application without them
+gets rejected or stalls:**
+
+| Document | Where | Note |
+| --- | --- | --- |
+| EIN | irs.gov, free, 10 min | Not a licence on its own; proves the business is real |
+| Trade name registration | Ohio SoS Form 534A, $39 | "ALL THE RAGE" is not your legal name |
+| Ohio vendor's license | Ohio Business Gateway, ~$25–50 | Ohio's version of a seller's permit |
+| STEC B, completed | tax.ohio.gov, free | Needs the vendor's license number on it |
+
+Then:
+
+1. **jb-jewelry.com** → wholesale / dropshipping application
+2. Fill in business name, EIN, and vendor's license number
+3. Attach the completed **STEC B** — this is what stops them charging you sales
+   tax on stock you intend to resell
+4. Same again at **blanka.com** or **selfnamed.com**
+5. Ask each the image-rights question in writing, and keep the answer
+
+Approval is usually a day or two, not instant, because a human reviews it.
+
+### What to send back here
+
+For each product sourced, four values:
+
+```
+slug             stack-rings-set
+supplier         jb-jewelry-blvd
+supplier_sku     THEIR-SKU-HERE
+landed_cost      7.40          (product + shipping to Ohio)
+```
+
+Plus the image URLs or the files. That is everything needed to replace the
+estimated costs with real ones and the placeholder photographs with pictures of
+the actual product.
+
+### Order of play
+
+Route A today gets 16 products real costs and real photos with no waiting.
+Route B runs in parallel while the Ohio paperwork clears, and picks up the
+highest-margin nine.
+
 ---
 
 ## The order, one line each
