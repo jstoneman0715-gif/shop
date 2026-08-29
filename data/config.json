@@ -86,7 +86,7 @@
     },
     "paypal": {
       "enabled": true,
-      "me_handle": "",
+      "me_handle": "julian2222",
       "note": "Your paypal.me handle only — no API keys. The cart opens paypal.me/<handle>/<total>. Test with $1 before going live."
     },
     "cashapp": {
